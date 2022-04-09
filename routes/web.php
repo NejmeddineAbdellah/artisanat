@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [MainController::class, 'accueil']);
+Route::get('/metier', [MainController::class, 'artisan']);
+Route::get('/client', [MainController::class, 'client']);
+Route::get('/login_client', [MainController::class, 'clientAuthentifier']);
+
+
 
 
 Route::group(['prefix' => 'admin'], function () {

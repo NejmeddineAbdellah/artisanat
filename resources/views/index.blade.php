@@ -27,6 +27,11 @@
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
         media="screen">
+    <!-- le choix du font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,500;1,300;1,400&display=swap"
+        rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -51,7 +56,7 @@
                             <div class="center-desk">
                                 <div class="logo">
                                     <a href="{{asset('http://127.0.0.1:8000')}}"><img src="images/logo.png"
-                                            alt="#" /></a>
+                                            alt="logo_artisana" width="80" height="80" /></a>
                                 </div>
                             </div>
                         </div>
@@ -67,10 +72,26 @@
                                 <div class="collapse navbar-collapse" id="navbarsExample04">
                                     <ul class="navbar-nav mr-auto">
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="#"> Accueil </a>
+                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000/')}}"> Accueil </a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#metier">Metier</a>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Metier
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                <li><a class="dropdown-item" href="#">Vêtements</a></li>
+                                                <li><a class="dropdown-item" href="#">Bois</a></li>
+                                                <li><a class="dropdown-item" href="#">Bâtiment traditionnel</a></li>
+                                                <li><a class="dropdown-item" href="#">Maroquinerie</a></li>
+                                                <li><a class="dropdown-item" href="#">Fer Forgé</a></li>
+                                                <li><a class="dropdown-item" href="#">Poterie et pierre</a></li>
+                                                <li><a class="dropdown-item" href="#">Tapis</a></li>
+                                                <li><a class="dropdown-item" href="#">Articles chaussants</a></li>
+                                                <li><a class="dropdown-item" href="#">Bijouterie</a></li>
+                                                <li><a class="dropdown-item" href="#">Dinanderie</a></li>
+                                                <li><a class="dropdown-item" href="#">Vannerie</a></li>
+                                            </ul>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="#apropos">A propos</a>
@@ -79,8 +100,19 @@
                                             <a class="nav-link" href="#contact">Contact-Nous</a>
                                         </li>
                                     </ul>
-                                    <div class="sign_btn"><a
-                                            href="{{asset('http://127.0.0.1:8000/admin/login')}}">Connecter</a>
+
+                                    <div class="btn-group">
+                                        <button type="button" class="btn sign_btn dropdown-toggle"
+                                            data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false"><a>Connecter</a>
+
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item"
+                                                href="{{asset('http://127.0.0.1:8000/admin/login')}}">Artisan</a>
+                                            <a class="dropdown-item"
+                                                href="{{asset('http://127.0.0.1:8000/login_client')}}">Client</a>
+                                        </div>
                                     </div>
                                     <div class="signup"><a
                                             href="{{asset('http://127.0.0.1:8000/admin/login')}}">Inscrire</a>
@@ -111,7 +143,7 @@
                 <div class="container">
                     <div class="carousel-caption relative">
                         <h1> <span>ART</span> number 1</h1>
-                        <a href="#contact">Contact Us</a>
+                        <a href="#contact">Contact-nous</a>
                     </div>
                 </div>
             </div>
@@ -149,12 +181,12 @@
     <!-- Metier -->
     <div id="metier" class="metier">
         <div class="container">
-         <div class="eight">
-            <h1>Metier</h1>
-         </div>
+            <div class="eight">
+                <h1>Metier</h1>
+            </div>
             <div class="row service">
 
-                
+
                 <div class="metier-line">
                     <!-- ------------------Vêtements-------------------------- -->
                     <div class="row carte ">
@@ -163,8 +195,9 @@
                                 <h2>Vêtements</h2>
                                 <span></span>
                                 <p> Il regroupe de nombreux métiers étant donné que les artisans confectionnent aussi
-                                    bien des vêtements typiques (djellabas, caftans…) . </p>
-                                <a class="read_more">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    bien des vêtements typiques (djellabas, caftans…)... </p>
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier')}}">Lire la suite <i
+                                        class=" fa fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
@@ -182,8 +215,9 @@
                                 <h2>Bois</h2>
                                 <span></span>
                                 <p>La principale matière première de cet artisanat est le bois. Cependant, il existe
-                                    différents types de bois : Acajou, Chêne, Cèdre, Acacia, buis, Bois rouge </p>
-                                <a class="read_more">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    différents types de bois : Acajou, Chêne, Cèdre, Acacia, buis, Bois rouge... </p>
+                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                        aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
@@ -193,7 +227,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="metier-line">
                     <!-- ------------------Bâtiment traditionnel-------------------------- -->
                     <div class="row carte ">
@@ -202,10 +236,9 @@
                                 <h2>Bâtiment traditionnel</h2>
                                 <span></span>
                                 <p>Longtemps laissés de côté à l'ère du béton et du «vite fait», les artisans du
-                                    bâtiment semblent enfin sortir de l'ombre. Leur savoir-faire a failli disparaître à
-                                    force d'être dévalorisé et folklorisé, mais le voilà de nouveau célébré. État des
-                                    lieux et portraits. </p>
-                                <a class="read_more">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    bâtiment semblent enfin sortir de l'ombre... </p>
+                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                        aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
@@ -223,10 +256,10 @@
                                 <h2>Maroquinerie</h2>
                                 <span></span>
                                 <p>Le maroquinier travaille le cuir et les matériaux souples pour la fabrication de
-                                    sacs, gants, ceintures, portefeuilles... . Entre tradition et modernité, il perpétue
-                                    un savoir-faire ancestral tout en adaptant ses modèles aux évolutions de la mode.
+                                    sacs, gants, ceintures, portefeuilles...
                                 </p>
-                                <a class="read_more">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                        aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
@@ -236,7 +269,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="metier-line">
                     <!-- ------------------Fer Forgé-------------------------- -->
                     <div class="row carte">
@@ -245,8 +278,9 @@
                                 <h2>Fer Forgé</h2>
                                 <span></span>
                                 <p>Dans l'artisanat marocain, le fer forgé tient un place très importante. Devenu une
-                                    des matières premières les plus utilisés dans ces arts . </p>
-                                <a class="read_more">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    des matières premières les plus utilisés dans ces arts... </p>
+                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                        aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-3">
@@ -264,8 +298,10 @@
                                 <h2>Poterie et pierre</h2>
                                 <span></span>
                                 <p>La poterie est le premier artisanat de l'histoire de l'humanité. Au Maroc, cet
-                                    artisanat mélange l'héritage berbère aux motifs d'inspiration arabo-andalouse . </p>
-                                <a class="read_more">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    artisanat mélange l'héritage berbère aux motifs d'inspiration arabo-andalouse...
+                                </p>
+                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                        aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-3">
@@ -275,7 +311,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="metier-line">
                     <!-- ------------------Tapis-------------------------- -->
                     <div class="row carte">
@@ -284,9 +320,10 @@
                                 <h2>Tapis</h2>
                                 <span></span>
                                 <p>Le tapis traditionnel est un moyen d'expression artistique, la transmission d'un
-                                    savoir ancestral. Il est unique et porte toujours un message différent. Le tapis est
-                                    plutôt de tradition Berbère et très présent dans le sud marocain. </p>
-                                <a class="read_more">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    savoir ancestral. Il est
+                                    plutôt de tradition Berbère et très présent dans le sud marocain... </p>
+                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                        aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-3">
@@ -305,9 +342,9 @@
                                 <span></span>
                                 <p>le couverture marocaine est un symbole intemporel de culture, de sagesse et de
                                     tradition. Fabriquées avec passion, patience et amour par les femmes des tribus du
-                                    Maroc, ces couvertures traditionnelles tissées à la main sont prisées depuis
-                                    l'Antiquité.</p>
-                                <a class="read_more">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    Maroc... </p>
+                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                        aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-3">
@@ -317,7 +354,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="metier-line">
                     <!-- ------------------Articles chaussants-------------------------- -->
                     <div class="row carte">
@@ -326,10 +363,9 @@
                                 <h2>Articles chaussants</h2>
                                 <span></span>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    ullamco laboris nisi ut aliquip ex ea commodo </p>
-                                <a class="read_more">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    ullamco laboris nisi ut aliquip ex ea commodo... </p>
+                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                        aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-3">
@@ -348,9 +384,9 @@
                                 <span></span>
                                 <p>Le bijoutier réalise des bijoux en métal (précieux ou non), terre, verre, textile,
                                     bois… en petite série ou en pièce unique. Il travaille la matière selon des
-                                    techniques diverses, adaptées au matériau utilisé. Le joaillier réalise des bijoux
-                                    ornés de pierres précieuses ou fines. </p>
-                                <a class="read_more">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    techniques diverses, adaptées au matériau utilisé... </p>
+                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                        aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-3">
@@ -360,19 +396,18 @@
                         </div>
                     </div>
                 </div>
-               
+
                 <div class="metier-line">
-                     <!-- ------------------Dinanderie-------------------------- -->
+                    <!-- ------------------Dinanderie-------------------------- -->
                     <div class="row carte">
                         <div class="col-lg-8 col-md-9 col-sm-12">
                             <div class="titlepage">
                                 <h2>Dinanderie</h2>
                                 <span></span>
                                 <p>Artisan d'art, le dinandier fabrique des objets utilitaires et décoratifs par
-                                    martelage à partir d'une feuille de cuivre, d'étain ou de fer-blanc. Il fabrique
-                                    notamment des casseroles, des fontaines en cuivre comme en Auvergne, ou encore des
-                                    moules (comme les moules à kouglof en Alsace). </p>
-                                <a class="read_more">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    martelage à partir d'une feuille de cuivre, d'étain ou de fer-blanc .... </p>
+                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                        aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-3">
@@ -390,10 +425,10 @@
                                 <h2>Vannerie</h2>
                                 <span></span>
                                 <p>La vannerie désigne : l'art de tresser des fibres végétales (les matériaux) pour
-                                    réaliser des objets très variés. les objets réalisés par cet artisanat, notoirement
-                                    les corbeilles, paniers, mannes et cabas, les chapeaux, les nattes, les vans ; et
-                                    l'Encyclopédie lui attribue la closerie.</p>
-                                <a class="read_more">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                    réaliser des objets très variés (les corbeilles, paniers, mannes et cabas, les
+                                    chapeaux, les nattes, les vans,...).</p>
+                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                        aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-3">
@@ -425,12 +460,12 @@
                             dépend de son besoin donc on a décidé de créer un site web dédié au marché de l'artisanat au
                             Maroc. Ce site est dédié à des étrangers pour une valeur spéciale auprès de ses clients.
                         </p>
-                        
+
                     </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="apropos_img">
-                        <figure><img src="images/logo.jpeg" alt="#" /></figure>
+                        <figure><img src="images/logo_pfe.jpg" alt="#" /></figure>
                     </div>
                 </div>
                 <a class="read_more">Lire la Suite ... <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
@@ -440,15 +475,15 @@
     <!-- end A propos -->
 
 
-    <!-- contact -->   
-      <div class="eight">
-            <h1>Contacter-nous</h1>
-         </div>
+    <!-- contact -->
+    <div class="eight">
+        <h1>Contacter-nous</h1>
+    </div>
     <div id="contact" class="contact">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-           
+
                     <div class="titlepage">
                         <h2>Request A call back</h2>
                     </div>
@@ -456,16 +491,29 @@
                 <div class="col-md-6 offset-md-3">
                     <form id="request" class="main_form">
                         <div class="row">
-                            <div class="col-md-12 ">
+                            <div class="col-md-6">
                                 <input class="contactus" placeholder="Full Name" type="type" name="Full Name">
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <input class="contactus" placeholder="Email" type="type" name="Email">
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-6">
+                                <textarea class="contactus" placeholder="Message" type="type"
+                                    Message="Name">Message </textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <input class="contactus" placeholder="Full Name" type="type" name="Full Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">
+                            </div>
+                            <div class="col-md-6">
+                                <input class="contactus" placeholder="Email" type="type" name="Email">
+                            </div>
+                            <div class="col-md-6">
                                 <textarea class="contactus" placeholder="Message" type="type"
                                     Message="Name">Message </textarea>
                             </div>
@@ -535,6 +583,11 @@
     <script src="http://127.0.0.1:8000/js/popper.min.js"></script>
     <script src="http://127.0.0.1:8000/js/bootstrap.bundle.min.js"></script>
     <script src="http://127.0.0.1:8000/js/jquery-3.0.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
+    </script>
+
 
     <!-- sidebar -->
     <script src="http://127.0.0.1:8000/js/jquery.mCustomScrollbar.concat.min.js"></script>

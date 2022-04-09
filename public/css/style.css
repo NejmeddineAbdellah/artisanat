@@ -42,7 +42,7 @@ html {
 body {
      color: #666666;
      font-size: 14px;
-     font-family: 'Poppins', sans-serif;
+     font-family: 'Ubuntu', sans-serif;
      line-height: 1.80857;
      font-weight: normal;
 }
@@ -57,6 +57,9 @@ a {
      -o-transition: all .3s ease-in-out;
      transition: all .3s ease-in-out;
 }
+.container {
+     max-width: 90% !important;/*Set your own width %; */
+  }
 
 h1,
 h2,
@@ -337,12 +340,12 @@ button {
      left: 0px;
      background-repeat: no-repeat;
 }
-
-.sign_btn {
-     padding-left: 50px;
+.header .dropdown-menu{
+     background-color: #EDC16B;
+     border: 0;
 }
 
-.sign_btn a {
+.sign_btn button{
      background-color: #fff;
      display: inline-block;
      padding: 7px 35px;
@@ -355,7 +358,7 @@ button {
     
 }
 
-.sign_btn a:hover {
+.sign_btn button:hover {
      color: #fff;
      background: #005B4C;
      
@@ -553,12 +556,12 @@ button {
 }
 
 .read_more {
-     font-size: 17px;
+     font-size: 14px;
      background-color: transparent;
      color: #7a7a7a;
      padding: 8px 0px;
      width: 100%;
-     max-width: 190px;
+     max-width:30%;
      text-align: center;
      display: inline-block;
      border-radius: 30px;
@@ -572,8 +575,9 @@ button {
 
 .read_more:hover {
      background: #005B4C;
+     cursor: pointer;
      border: #005B4C solid 3px;
-     color: #fff !important;
+     color: #005B4C !important;
      transition: ease-in all 0.5s;
 }
 
@@ -679,7 +683,8 @@ button {
 
     width:50%;
     padding-top: 10px;
-    border: thick double #005B4C;
+    border-top: thick double #005B4C;
+    border-left: thick double #005B4C;
  
  }
  .metier .service .carte img{
@@ -718,20 +723,20 @@ button {
 
 .metier .service p{
      padding-top: 20px;
-     font-size: 13px;
-     line-height: 15px;
-     font-weight: 400;
- 
+     font-size: 18px;
+     font-weight: 500;
+     font-family: Blanco,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+     line-height: 25px; 
+     margin-bottom: 15px; 
+     text-overflow: ellipsis;
+     overflow: hidden;
+
  }
 .metier .service h2{
-     font-size: 25px;
+     font-size: 28px;
      line-height: 35px;
-     font-weight: 200;
-
+     font-weight: 400;
      color: #005B4C;
-     font-size: 17px;
-     line-height: 35px;
-     font-weight: 500;
      padding: 10px 0px 0px 0px;
  } 
 
@@ -752,10 +757,6 @@ button {
      text-align: left;
      padding: 0;
 }
-.apropos .read_more a{
-     color: #fff;
-}
-
 .apropos .titlepage h2 {
      color: #fff;
 }
@@ -783,10 +784,21 @@ button {
      width: 100%;
 }
 
-.apropos .titlepage .read_more {
+.apropos .read_more {
+     width: 15%;
      border: #fff solid 3px;
      color: #fff;
+     background-color: #fff;
 }
+.apropos .read_more:hover{
+     width: 15%;
+     border: #005B4C solid 3px;
+     background: #005B4C;
+     cursor: pointer;
+     color: #fff !important;
+     transition: ease-in all 0.5s;
+}
+
 
 
 /** apropos section **/

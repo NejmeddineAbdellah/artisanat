@@ -67,13 +67,13 @@
                                 <div class="collapse navbar-collapse" id="navbarsExample04">
                                     <ul class="navbar-nav mr-auto">
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="#"> Accueil </a>
+                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000')}}"> Accueil </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#metier">Metier</a>
+                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000/#metier')}}">Metier</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#apropos">A propos</a>
+                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000/#apropos')}}">A propos</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="#contact">Contact-Nous</a>
