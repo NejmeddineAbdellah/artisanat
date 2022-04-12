@@ -56,7 +56,7 @@
                             <div class="center-desk">
                                 <div class="logo">
                                     <a href="{{asset('http://127.0.0.1:8000')}}"><img src="images/logo.png"
-                                            alt="logo_artisana" width="80" height="80" /></a>
+                                            alt="logo_artisana" /></a>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +115,7 @@
                                         </div>
                                     </div>
                                     <div class="signup"><a
-                                            href="{{asset('http://127.0.0.1:8000/admin/login')}}">Inscrire</a>
+                                            href="{{asset('http://127.0.0.1:8000/inscrire_client')}}">Inscrire</a>
                                     </div>
                                 </div>
                             </nav>
@@ -142,7 +142,6 @@
                 <img class="first-slide" src="images/im1.jpg" alt="First slide">
                 <div class="container">
                     <div class="carousel-caption relative">
-                        <h1> <span>ART</span> number 1</h1>
                         <a href="#contact">Contact-nous</a>
                     </div>
                 </div>
@@ -151,7 +150,6 @@
                 <img class="second-slide" src="images/im2.jpg" alt="Second slide">
                 <div class="container">
                     <div class="carousel-caption relative">
-                        <h1> <span>ART</span> number 2</h1>
                         <a href="#contact">Contact Us</a>
                     </div>
                 </div>
@@ -160,7 +158,6 @@
                 <img class="third-slide" src="images/im3.jpg" alt="Third slide">
                 <div class="container">
                     <div class="carousel-caption relative">
-                        <h1> <span>ART</span>number 3</h1>
                         <a href="#contact">Contact Us</a>
                     </div>
                 </div>
@@ -465,7 +462,7 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="apropos_img">
-                        <figure><img src="images/logo_pfe.jpg" alt="#" /></figure>
+                        <figure><img src="images/logo.jpeg" alt="#" /></figure>
                     </div>
                 </div>
                 <a class="read_more">Lire la Suite ... <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
@@ -485,37 +482,33 @@
                 <div class="col-md-12">
 
                     <div class="titlepage">
-                        <h2>Request A call back</h2>
+                        <h2>Vous êtes artisan?</h2>
+                        <h2>Contactez-nous</h2>
+
                     </div>
                 </div>
                 <div class="col-md-6 offset-md-3">
                     <form id="request" class="main_form">
                         <div class="row">
                             <div class="col-md-6">
-                                <input class="contactus" placeholder="Full Name" type="type" name="Full Name">
+                                <input class="contactus" placeholder="Nom" type="type" name="Full Name">
                             </div>
                             <div class="col-md-6">
-                                <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">
+                                <input class="contactus" placeholder="Prenom" type="type" name="Full Name">
                             </div>
                             <div class="col-md-6">
-                                <input class="contactus" placeholder="Email" type="type" name="Email">
+                                <input class="contactus" placeholder="Téléphone" type="type" name="Phone Number">
                             </div>
-                            <div class="col-md-6">
-                                <textarea class="contactus" placeholder="Message" type="type"
-                                    Message="Name">Message </textarea>
-                            </div>
-                            <div class="col-md-6">
-                                <input class="contactus" placeholder="Full Name" type="type" name="Full Name">
-                            </div>
-                            <div class="col-md-6">
-                                <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">
-                            </div>
+                            
                             <div class="col-md-6">
                                 <input class="contactus" placeholder="Email" type="type" name="Email">
                             </div>
+                          
                             <div class="col-md-6">
-                                <textarea class="contactus" placeholder="Message" type="type"
-                                    Message="Name">Message </textarea>
+                                <input class="contactus" placeholder="Metier" type="type" name="Phone Number">
+                            </div>
+                            <div class="col-md-6">
+                                <input class="contactus" placeholder="Email" type="type" name="Email">
                             </div>
                             <div class="col-sm-12">
                                 <button class="send_btn">Send</button>
@@ -529,54 +522,42 @@
     <!-- end contact -->
 
 
-
-
     <!-- footer -->
-    <div class="footer">
-        <footer>
-            <div class="container">
-                <div class="row footercontent">
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>Lien</h3>
-                        <ul>
-                            <li><a href="#">Acceuil</a></li>
-                            <li><a href="#">Nos-secteur</a></li>
-                            <li><a href="#">A propos</a></li>
-                            <li><a href="#">Contact-nous</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>metier</h3>
-                        <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Careers</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 item text">
-                        <h3>Artisanat</h3>
-                        <p>On a constaté la difficulté de contacter les artisans et de trouver ce que le client veut ça
-                            dépend de son besoin donc on a décidé de créer un site web dédié au marché de l'artisanat au
-                            Maroc. Ce site est dédié à des étrangers pour une valeur spéciale auprès de ses clients.</p>
-                    </div>
-                </div>
-                <div class="copyright">
-                    <p>Copyright Design by Artisanat © 2018</p>
-                </div>
-        </footer>
-    </div>
+    <footer class="footer">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+            <li class="social-icon_item"><a class="social-icon_link" href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+            <li class="social-icon_item"><a class="social-icon_link" href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+            <li class="social-icon_item"><a class="social-icon_link" href="#">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li class="social-icon_item"><a class="social-icon_link" href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+        </ul>
+        <ul class="menu">
+            <li class="menu_item"><a class="menu_link" href="#">Home</a></li>
+            <li class="menu_item "><a class="menu_link" href="#">About</a></li>
+            <li class="menu_item"><a class="menu_link" href="#">Services</a></li>
+            <li class="menu_item"><a class="menu_link" href="#">Team</a></li>
+            <li class="menu_item"><a class="menu_link" href="#">Contact</a></li>
+
+        </ul>
+        <p>&copy;EL MAALAM | All Rights Reserved</p>
+    </footer>
+
+
     <!-- end footer -->
 
-    <!-- back to the top -->
-    <div class="progress-bar">
-        <button class="back-to-top hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" class="back-to-top-icon" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
-            </svg>
-        </button>
-    </div>
-    <!-- end back to the top -->
 
     <!-- Javascript files-->
     <script src="http://127.0.0.1:8000/js/jquery.min.js"></script>
@@ -587,6 +568,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
         integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
     </script>
+
+
+    <!-- footer-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
     <!-- sidebar -->

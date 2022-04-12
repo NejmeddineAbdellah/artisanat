@@ -18,6 +18,9 @@ Route::get('/', [MainController::class, 'accueil']);
 Route::get('/metier', [MainController::class, 'artisan']);
 Route::get('/client', [MainController::class, 'client']);
 Route::get('/login_client', [MainController::class, 'clientAuthentifier']);
+Route::get('/inscrire_client', [MainController::class, 'clientinscrire']);
+
+
 
 
 

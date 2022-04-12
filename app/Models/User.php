@@ -19,8 +19,11 @@ class User extends \TCG\Voyager\Models\User
      */
     protected $fillable = [
         'name',
+        'nom',
+        'prenom',
         'email',
         'password',
+      
     ];
 
     /**
@@ -31,6 +34,10 @@ class User extends \TCG\Voyager\Models\User
     protected $hidden = [
         'password',
         'remember_token',
+        'metier',
+    
+
+
     ];
 
     /**
