@@ -30,12 +30,7 @@ class MainController extends Controller
         return view("login_client");
     }
 
-    public function clientinscrire(){
-        
-      
-
-        return view("inscription_cl");
-    }
+ 
     public function create(){
     
         return view("testets");

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\DmartisanController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 
@@ -18,7 +20,14 @@ Route::get('/', [MainController::class, 'accueil']);
 Route::get('/metier', [MainController::class, 'artisan']);
 Route::get('/client', [MainController::class, 'client']);
 Route::get('/login_client', [MainController::class, 'clientAuthentifier']);
-Route::get('/inscrire_client', [MainController::class, 'clientinscrire']);
+Route::get('/inscription_cl', [ClientController::class, 'index']);
+Route::post('ajouter_client', [ClientController::class, 'store']);
+
+
+
+
+
+
 
 
 

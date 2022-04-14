@@ -115,7 +115,7 @@
                                         </div>
                                     </div>
                                     <div class="signup"><a
-                                            href="{{asset('http://127.0.0.1:8000/inscrire_client')}}">Inscrire</a>
+                                            href="{{asset('http://127.0.0.1:8000/inscription_cl')}}">Inscrire</a>
                                     </div>
                                 </div>
                             </nav>
@@ -150,7 +150,7 @@
                 <img class="second-slide" src="images/im2.jpg" alt="Second slide">
                 <div class="container">
                     <div class="carousel-caption relative">
-                        <a href="#contact">Contact Us</a>
+                        <a href="#contact">Contacter-nous</a>
                     </div>
                 </div>
             </div>
@@ -158,7 +158,7 @@
                 <img class="third-slide" src="images/im3.jpg" alt="Third slide">
                 <div class="container">
                     <div class="carousel-caption relative">
-                        <a href="#contact">Contact Us</a>
+                        <a href="#contact">Contacter-nous</a>
                     </div>
                 </div>
             </div>
@@ -219,7 +219,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="metier_img">
-                                <figure><img src="images/about_img.png" alt="#" /></figure>
+                                <figure><img src="images/metier/menouisi.jpg" alt="#" /></figure>
                             </div>
                         </div>
                     </div>
@@ -282,7 +282,7 @@
                         </div>
                         <div class="col-lg-4 col-md-3">
                             <div class="metier_img">
-                                <figure><img src="images/about_img.png" alt="#" /></figure>
+                                <figure><img src="images/metier/forge2.jpg" alt="#" /></figure>
                             </div>
                         </div>
                     </div>
@@ -388,7 +388,7 @@
                         </div>
                         <div class="col-lg-4 col-md-3">
                             <div class="metier_img">
-                                <figure><img src="images/about_img.png" alt="#" /></figure>
+                                <figure><img src="images/metier/bijoue3.jpg" alt="#" /></figure>
                             </div>
                         </div>
                     </div>

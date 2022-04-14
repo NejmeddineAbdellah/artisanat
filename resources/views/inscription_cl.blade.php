@@ -25,8 +25,8 @@
 			<div class="login100-more" style="background-image: url('images/bg-01.jpg');"></div>
 
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-				<form class="login100-form validate-form" action="add_client" method="POST" enctype="multipart/form-data">
-
+				<form class="login100-form validate-form" action="ajouter_client" method="POST" enctype="multipart/form-data">
+						@csrf
 					<span class="login100-form-title p-b-59">
 						S'inscrire
 					</span>
@@ -49,28 +49,20 @@
 
 					<div class="wrap-input100 validate-input" data-validate = "Un email valide est requis : ex@abc.xyz">
 						<span class="label-input100">Email</span>
-						<input class="input100" type="text" name="email" placeholder="Adresse email">
+						<input class="input100" type="email" name="email" placeholder="Adresse email">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Le mot de passe est requis">
 						<span class="label-input100">Mot de passe</span>
-						<input class="input100" type="text" name="pass" placeholder="*************">
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate = "Veuillez répéter le mot de passe">
-						<span class="label-input100">Confirmer Mot de passe</span>
-						<input class="input100" type="text" name="repeat-pass" placeholder="*************">
+						<input class="input100" type="password" name="pass" placeholder="*************">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
-								S'inscrire
-							</button>
+							<button type="submit" name="submit" class="login100-form-btn">S'inscrire</button>
 						</div>
 
 						<a href="{{asset('http://127.0.0.1:8000/login_client')}}" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
