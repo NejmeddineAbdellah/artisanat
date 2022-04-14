@@ -1,21 +1,10 @@
-/*--------------------------------------------------------------------- File Name: responsive.css ---------------------------------------------------------------------*/
-
-
-/*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
-
-
-/*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
+/*------------------------------ import Fonts ---------------------------------*/
 
 @import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,400,600,700,900&display=swap');
 
-/*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
- 2) font-family: 'Poppins', sans-serif;
- ----------------------------------------*****/
-
-
-/*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
+/*----------------------------- import Files ------------------------------------*/
 
 @import url(animate.min.css);
 @import url(normalize.css);
@@ -29,7 +18,7 @@
 @import url(jquery-ui.css);
 @import url(nice-select.css);
 
-/*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
+/*----------------------------- skeleton ---------------------------------------*/
 
 * {
      box-sizing: border-box !important;
@@ -957,7 +946,6 @@ button {
 
 /** footer **/
 
-
 .footer {
      margin-bottom: 0px;
      background-color: #EDC16B;
@@ -976,6 +964,11 @@ button {
      align-items: center;
      flex-direction: column;
 }
+.footer a{
+     margin: 15px;
+
+}
+
 
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
@@ -990,6 +983,7 @@ button {
   align-items: center;
   margin: 10px 0;
   flex-wrap: wrap;
+  
 }
 
 .social-icon__item,
@@ -1006,6 +1000,8 @@ button {
 }
 .social-icon__link:hover {
   transform: translateY(-10px);
+  color: #fff;
+  background-color: #fff;
 }
 
 .menu__link {
@@ -1021,6 +1017,7 @@ button {
 
 .menu__link:hover {
   opacity: 1;
+  color: #fff;
 }
 
 .footer p {
@@ -1113,7 +1110,7 @@ button {
 }
 
 .submit:hover {
-     background-color: #00aeef;
+     background-color: #fff;
      transition: ease-in all 0.5s;
      color: #fff;
 }

@@ -482,7 +482,7 @@
                 <div class="col-md-12">
 
                     <div class="titlepage">
-                        <h2>Vous êtes artisan?</h2>
+                        <h2>Etes-Vous un artisan?</h2>
                         <h2>Contactez-nous</h2>
 
                     </div>

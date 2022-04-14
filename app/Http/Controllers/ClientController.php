@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 
-use App\Models\Clients;
 use Illuminate\Http\Request;
 
 class ClientController extends Controller
@@ -37,24 +36,24 @@ class ClientController extends Controller
     public function store(Request $request)
     {
       
+        $nom = $request->nom;
+        $prenom = $request->prenom;
+        $email = $request->email;
+        $telephone = $request->telephone;
+        $password = $request->pass;
         
-$nom = $request->nom;
-$prenom = $request->prenom;
-$email = $request->email;
-$telephone = $request->telephone;
-$password = $request->pass;
-
-$client = new \App\Models\Clients();
-
-$client->nom=$nom;
-$client->prenom=$prenom;
-$client->email=$email;
-$client->tele=$telephone;
-$client->password=bcrypt($password);
-
-$client->save();
-
-return redirect('/');
+        $client = new \App\Models\Clients();
+        
+        $client->nom=$nom;
+        $client->prenom=$prenom;
+        $client->email=$email;
+        $client->tele=$telephone;
+        $client->password=bcrypt($password);
+        
+        $client->save();
+        
+        return redirect('/');
+        $nom = $request->nom;
 
     }
 
