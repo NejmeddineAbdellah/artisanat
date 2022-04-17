@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <!-- basic -->
@@ -20,7 +20,7 @@
     <!-- Responsive-->
     <link rel="stylesheet" href="http://127.0.0.1:8000/css/responsive.css">
     <!-- fevicon -->
-    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <link rel="icon" href="images/fevicon.png" type="http://127.0.0.1:8000/image/gif" />
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="http://127.0.0.1:8000/css/jquery.mCustomScrollbar.min.css">
     <!-- Tweaks for older IEs-->
@@ -36,7 +36,7 @@
 <body class="main-layout">
     <!-- loader  -->
     <div class="loader_bg">
-        <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+        <div class="loader"><img src="http://127.0.0.1:8000/images/loading.gif" alt="#" /></div>
     </div>
     <!-- end loader -->
 
@@ -51,7 +51,7 @@
                             <div class="center-desk">
                                 <div class="logo">
                                     <a href="{{asset('http://127.0.0.1:8000')}}"><img src="images/logo.png"
-                                            alt="#" /></a>
+                                            alt="logo_artisana" /></a>
                                 </div>
                             </div>
                         </div>
@@ -67,23 +67,61 @@
                                 <div class="collapse navbar-collapse" id="navbarsExample04">
                                     <ul class="navbar-nav mr-auto">
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000')}}"> Accueil </a>
+                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000/')}}"> Accueil </a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Metier
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                <li><a class="dropdown-item" href="#">Vêtements</a></li>
+                                                <li><a class="dropdown-item" href="#">Bois</a></li>
+                                                <li><a class="dropdown-item" href="#">Bâtiment traditionnel</a></li>
+                                                <li><a class="dropdown-item" href="#">Maroquinerie</a></li>
+                                                <li><a class="dropdown-item" href="#">Fer Forgé</a></li>
+                                                <li><a class="dropdown-item" href="#">Poterie et pierre</a></li>
+                                                <li><a class="dropdown-item" href="#">Tapis</a></li>
+                                                <li><a class="dropdown-item" href="#">Articles chaussants</a></li>
+                                                <li><a class="dropdown-item" href="#">Bijouterie</a></li>
+                                                <li><a class="dropdown-item" href="#">Dinanderie</a></li>
+                                                <li><a class="dropdown-item" href="#">Vannerie</a></li>
+                                            </ul>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000/#metier')}}">Metier</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000/#apropos')}}">A propos</a>
+                                            <a class="nav-link" href="#apropos">A propos</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="#contact">Contact-Nous</a>
                                         </li>
                                     </ul>
-                                    <div class="sign_btn"><a
-                                            href="{{asset('http://127.0.0.1:8000/admin/login')}}">Connecter</a>
+
+                                    <div class="btn-group">
+                                        <button type="button" class="btn sign_btn dropdown-toggle"
+                                            data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false"><a>Connecter</a>
+
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item"
+                                                href="{{asset('http://127.0.0.1:8000/admin/login')}}">Artisan</a>
+                                            <a class="dropdown-item"
+                                                href="{{asset('http://127.0.0.1:8000/login_client')}}">Client</a>
+                                        </div>
                                     </div>
-                                    <div class="signup"><a
-                                            href="{{asset('http://127.0.0.1:8000/admin/login')}}">Inscrire</a>
+
+                                    <div class="btn-group">
+                                        <button type="button" class="btn sign_btn dropdown-toggle"
+                                            data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false"><a>inScrire</a>
+
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item"
+                                                href="{{asset('http://127.0.0.1:8000/inscription_art')}}">Artisan</a>
+                                            <a class="dropdown-item"
+                                                href="{{asset('http://127.0.0.1:8000/inscription_cl')}}">Client</a>
+                                        </div>
                                     </div>
                                 </div>
                             </nav>
@@ -107,7 +145,7 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="first-slide" src="images/im1.jpg" alt="First slide">
+                <img class="first-slide" src="http://127.0.0.1:8000/images/im1.jpg" alt="First slide">
                 <div class="container">
                     <div class="carousel-caption relative">
                         <h1> <span>ART</span> number 1</h1>
@@ -116,19 +154,10 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="second-slide" src="images/im2.jpg" alt="Second slide">
+                <img class="second-slide" src="http://127.0.0.1:8000/images/im2.jpg" alt="Second slide">
                 <div class="container">
                     <div class="carousel-caption relative">
                         <h1> <span>ART</span> number 2</h1>
-                        <a href="#contact">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="third-slide" src="images/im3.jpg" alt="Third slide">
-                <div class="container">
-                    <div class="carousel-caption relative">
-                        <h1> <span>ART</span>number 3</h1>
                         <a href="#contact">Contact Us</a>
                     </div>
                 </div>
@@ -148,112 +177,72 @@
 
 
     <!-- Artisan -->
-    
     <div class="container">
-      <br>
-    <h1>Les Artisan de ce metier : </h1>
+        <br>
+        <h1>Les Artisan de ce metier : </h1>
         <div class="row card_artisan d_flex">
+            <!-- --------------un boucle pour recuperer et afficher les artisan---------------- -->
+            @foreach ($myArtisan as $art)
             <div class="col-lg-4 col-md-6 col-sm-12 align-items-stretch card">
                 <img class="card-img-top" src="images/cross_img.png" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">amine chemrari</h5>
+                    <h5 class="card-title">{{ $art->nom }} {{ $art->prenom }}</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                         additional
                         content. This card has even longer content than the first to show that equal height action.</p>
-                        <a class="read_more">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                    <a class="read_more">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 align-items-stretch card">
-                <img class="card-img-top" src="images/cross_img.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">amine chemrari</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional
-                        content. This card has even longer content than the first to show that equal height action.</p>
-                        <a class="read_more">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 align-items-stretch card">
-                <img class="card-img-top" src="images/cross_img.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">amine chemrari</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional
-                        content. This card has even longer content than the first to show that equal height action.</p>
-                        <a class="read_more">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 align-items-stretch card">
-                <img class="card-img-top" src="images/cross_img.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">amine chemrari</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional
-                        content. This card has even longer content than the first to show that equal height action.</p>
-                        <a class="read_more">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 align-items-stretch card">
-                <img class="card-img-top" src="images/cross_img.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">amine chemrari</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional
-                        content. This card has even longer content than the first to show that equal height action.</p>
-                        <a class="read_more">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-
+            @endforeach
+            <!-- ----------------------------------- -->
         </div>
     </div>
     <!-- end Artisan -->
 
 
-
     <!-- footer -->
-    <div class="footer">
-        <footer>
-            <div class="container">
-                <div class="row footercontent">
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>Lien</h3>
-                        <ul>
-                            <li><a href="#">Acceuil</a></li>
-                            <li><a href="#">Nos-secteur</a></li>
-                            <li><a href="#">A propos</a></li>
-                            <li><a href="#">Contact-nous</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>metier</h3>
-                        <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Careers</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 item text">
-                        <h3>Artisanat</h3>
-                        <p>On a constaté la difficulté de contacter les artisans et de trouver ce que le client veut ça
-                            dépend de son besoin donc on a décidé de créer un site web dédié au marché de l'artisanat au
-                            Maroc. Ce site est dédié à des étrangers pour une valeur spéciale auprès de ses clients.</p>
-                    </div>
-                </div>
-                <div class="copyright">
-                    <p>Copyright Design by Artisanat © 2018</p>
-                </div>
-        </footer>
-    </div>
+    <footer class="footer">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+            <li class="social-icon_item"><a class="social-icon_link" href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+            <li class="social-icon_item"><a class="social-icon_link" href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+            <li class="social-icon_item"><a class="social-icon_link" href="#">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li class="social-icon_item"><a class="social-icon_link" href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+        </ul>
+        <ul class="menu">
+            <li class="menu_item"><a class="menu_link" href="#">Home</a></li>
+            <li class="menu_item "><a class="menu_link" href="#">About</a></li>
+            <li class="menu_item"><a class="menu_link" href="#">Services</a></li>
+            <li class="menu_item"><a class="menu_link" href="#">Team</a></li>
+            <li class="menu_item"><a class="menu_link" href="#">Contact</a></li>
+
+        </ul>
+        <p>&copy;EL MAALAM | All Rights Reserved</p>
+    </footer>
+ 
     <!-- end footer -->
 
     <!-- back to the top -->
     <div class="progress-bar" />
-    <button class="back-to-top hidden">
+        <button class="back-to-top hidden">
         <svg xmlns="http://www.w3.org/2000/svg" class="back-to-top-icon" fill="none" viewBox="0 0 24 24"
             stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
         </svg>
-    </button>
+        </button>
     <div />
     <!-- end back to the top -->
 

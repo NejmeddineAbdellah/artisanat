@@ -17,15 +17,18 @@ class User extends \TCG\Voyager\Models\User
      *
      * @var array<int, string>
      */
+    protected $artisan = 'users';
     protected $fillable = [
         'name',
         'nom',
         'prenom',
+        'telephone',
         'email',
         'password',
+        'metier',
+        'avatare',
       
     ];
-
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -34,7 +37,7 @@ class User extends \TCG\Voyager\Models\User
     protected $hidden = [
         'password',
         'remember_token',
-        'metier',
+        
     
 
 

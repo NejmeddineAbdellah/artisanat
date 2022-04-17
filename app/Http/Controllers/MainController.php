@@ -15,25 +15,4 @@ class MainController extends Controller
         return view("index");
     }
 
-    public function artisan()
-    {
-        return view("artisan");
-    }
-
-    public function client()
-    {
-        return view("client");
-    }
-
-    public function clientAuthentifier()
-    {
-        return view("login_client");
-    }
-
- 
-    public function create(){
-    
-        return view("testets");
-    }
-
 }

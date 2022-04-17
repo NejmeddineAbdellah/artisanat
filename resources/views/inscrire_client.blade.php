@@ -1,25 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-  	<title>Espace Client</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+	<title>Page D'inscription</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/css/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/css/util.css">
+	<link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/css/main.css">
+<!--===============================================================================================-->
 
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	<link rel="stylesheet" href="http://127.0.0.1:8000/css/style_log_cl.css">
-
-	</head>
-	<body class="img js-fullheight" style="background-image: url(images/pg7.jpg);">
-
-
-	  <header>
+</head>
+<body style="background-color: #999999;">
+		
+	<header>
         <!-- header inner -->
         <div class="header">
             <div class="container-fluid">
                 <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                        <div class="full">
+                            <div class="center-desk">
+                                <div class="logo">
+                                    <a href="{{asset('http://127.0.0.1:8000')}}"><img src="images/logo.png"
+                                            alt="logo_artisana" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
                         <div class="header_information">
                             <nav class="navigation navbar navbar-expand-md navbar-dark ">
@@ -94,54 +109,71 @@
                 </div>
             </div>
         </div>
-    </header>
+  </header>
 
 
-	<section class="ftco-section">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Espace Client</h2>
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-md-6 col-lg-4">
-					<div class="login-wrap p-0">
-		      	<h3 class="mb-4 text-center">Avoir un compte?</h3>
-		      	<form action="connect" method="POST" enctype="multipart/form-data" class="signin-form">
-		      		<div class="form-group">
-		      			<input type="text" class="form-control" name="email" placeholder="Email" required>
-		      		</div>
-	            <div class="form-group">
-	              <input id="password-field" type="password" name="password" class="form-control" placeholder="Mot de passe" required>
-	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
-	            </div>
-	            <div class="form-group">
-	            	<button type="submit" class="form-control btn btn-primary submit px-3">Connecter</button>
-	            </div>
-	            <div class="form-group d-md-flex">
-	            	<div class="w-50">
-		            	<label class="checkbox-wrap checkbox-primary">Remember Me
-									  <input type="checkbox" checked>
-									  <span class="checkmark"></span>
-									</label>
-								</div>
-								<div class="w-50 text-md-right">
-									<a href="http://127.0.0.1:8000/inscription_cl" style="color: #fff"> <span>Inscrire ?</span> </a>
-								</div>	
-	            </div>
-							
-	          </form>
-		      </div>
-				</div>
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="login100-more" style="background-image: url('images/bg-01.jpg');"></div>
+
+			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
+				<form class="login100-form validate-form" action="ajouter_client" method="POST" enctype="multipart/form-data">
+						@csrf
+					<span class="login100-form-title p-b-59">
+						S'inscrire
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate="Le nom est requis">
+						<span class="label-input100">Nom</span>
+						<input class="input100" type="text" name="nom" placeholder="Votre ...">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate="Le prénom est requis">
+						<span class="label-input100">Prénom</span>
+						<input class="input100" type="text" name="prenom" placeholder="Votre ...">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate="Le Telephone est requis">
+						<span class="label-input100">Telephone</span>
+						<input class="input100" type="text" name="telephone" placeholder="Votre ...">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Un email valide est requis : ex@abc.xyz">
+						<span class="label-input100">Email</span>
+						<input class="input100" type="email" name="email" placeholder="Adresse email">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Le mot de passe est requis">
+						<span class="label-input100">Mot de passe</span>
+						<input class="input100" type="password" name="pass" placeholder="*************">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button type="submit" name="submit" class="login100-form-btn">S'inscrire</button>
+						</div>
+
+						<a href="{{asset('http://127.0.0.1:8000/login_client')}}" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
+                        Déjà un compte
+                        </a>
+					</div>
+				</form>
 			</div>
 		</div>
-	</section>
-
+	</div>
+	
+<!--===============================================================================================-->
 	<script src="http://127.0.0.1:8000/js/jquery.min.js"></script>
-  <script src="http://127.0.0.1:8000/js/poppercl.js"></script>
-  <script src="http://127.0.0.1:8000/js/bootstrap.min.js"></script>
-  <script src="http://127.0.0.1:8000/js/maincl.js"></script>
+<!--===============================================================================================-->
+	<script src="http://127.0.0.1:8000/js/popper.js"></script>
+	<script src="http://127.0.0.1:8000/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="http://127.0.0.1:8000/js/maincl_insc.js"></script>
 
-	</body>
+</body>
 </html>

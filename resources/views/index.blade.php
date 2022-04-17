@@ -114,8 +114,19 @@
                                                 href="{{asset('http://127.0.0.1:8000/login_client')}}">Client</a>
                                         </div>
                                     </div>
-                                    <div class="signup"><a
-                                            href="{{asset('http://127.0.0.1:8000/inscription_cl')}}">Inscrire</a>
+
+                                    <div class="btn-group">
+                                        <button type="button" class="btn sign_btn dropdown-toggle"
+                                            data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false"><a>inScrire</a>
+
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item"
+                                                href="{{asset('http://127.0.0.1:8000/inscrire_artisan')}}">Artisan</a>
+                                            <a class="dropdown-item"
+                                                href="{{asset('http://127.0.0.1:8000/inscrire_client')}}">Client</a>
+                                        </div>
                                     </div>
                                 </div>
                             </nav>
@@ -193,7 +204,7 @@
                                 <span></span>
                                 <p> Il regroupe de nombreux métiers étant donné que les artisans confectionnent aussi
                                     bien des vêtements typiques (djellabas, caftans…)... </p>
-                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier')}}">Lire la suite <i
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/vetement')}}">Lire la suite <i
                                         class=" fa fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
@@ -213,7 +224,7 @@
                                 <span></span>
                                 <p>La principale matière première de cet artisanat est le bois. Cependant, il existe
                                     différents types de bois : Acajou, Chêne, Cèdre, Acacia, buis, Bois rouge... </p>
-                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/bois')}}">Lire la suite <i class="fa fa-arrow-right"
                                         aria-hidden="true"></i></a>
                             </div>
                         </div>
@@ -482,33 +493,24 @@
                 <div class="col-md-12">
 
                     <div class="titlepage">
-                        <h2>Etes-Vous un artisan?</h2>
-                        <h2>Contactez-nous</h2>
-
+                        <h2>Vous-avez des question ?<br> n'hésitez  pas de Contactez-nous </h2>
                     </div>
                 </div>
                 <div class="col-md-6 offset-md-3">
                     <form id="request" class="main_form">
                         <div class="row">
                             <div class="col-md-6">
-                                <input class="contactus" placeholder="Nom" type="type" name="Full Name">
+                                <input class="contactus" placeholder="Nom et Prenom" type="texte" name="Full Name">
                             </div>
+
                             <div class="col-md-6">
-                                <input class="contactus" placeholder="Prenom" type="type" name="Full Name">
+                                <input class="contactus" placeholder="Email" type="email" name="Email">
                             </div>
-                            <div class="col-md-6">
-                                <input class="contactus" placeholder="Téléphone" type="type" name="Phone Number">
+
+                            <div class="col-md-12">
+                                <input class="contactus" placeholder="objet" type="textarea" name="Votre message">
                             </div>
-                            
-                            <div class="col-md-6">
-                                <input class="contactus" placeholder="Email" type="type" name="Email">
-                            </div>
-                          
-                            <div class="col-md-6">
-                                <input class="contactus" placeholder="Metier" type="type" name="Phone Number">
-                            </div>
-                            <div class="col-md-6">
-                                <input class="contactus" placeholder="Email" type="type" name="Email">
+ 
                             </div>
                             <div class="col-sm-12">
                                 <button class="send_btn">Send</button>
@@ -554,8 +556,6 @@
         </ul>
         <p>&copy;EL MAALAM | All Rights Reserved</p>
     </footer>
-
-
     <!-- end footer -->
 
 

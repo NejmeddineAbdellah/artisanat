@@ -3,6 +3,8 @@
 use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\MetierController;
+use App\Http\Controllers\ArtisanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,11 +18,13 @@ use App\Http\Controllers\MainController;
 */
 
 Route::get('/', [MainController::class, 'accueil']);
-Route::get('/metier', [MainController::class, 'artisan']);
-Route::get('/client', [MainController::class, 'client']);
-Route::get('/login_client', [MainController::class, 'clientAuthentifier']);
-Route::get('/inscription_cl', [ClientController::class, 'index']);
+Route::get('/metier/{metier}', [MetierController::class, 'show']);
+Route::get('login_client', [ClientController::class, 'clientAuthentifier']);
+Route::get('/inscrire_client', [ClientController::class, 'index']);
+Route::get('/inscrire_artisan', [ArtisanController::class, 'index']);
+Route::get('connect', [ClientController::class, 'clientlogin']);
 Route::post('ajouter_client', [ClientController::class, 'store']);
+Route::post('ajouter_artisan', [ArtisanController::class, 'store']);
 
 
 
