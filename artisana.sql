@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Apr 18, 2022 at 03:09 PM
+=======
+-- Generation Time: Apr 18, 2022 at 01:06 AM
+>>>>>>> f3f8498d28561d2e9972f2cac4bfe836b5ce6c73
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -41,7 +45,11 @@ CREATE TABLE `article` (
 --
 
 CREATE TABLE `clients` (
+<<<<<<< HEAD
   `id` bigint(20) NOT NULL,
+=======
+  `id` bigint(20) UNSIGNED NOT NULL,
+>>>>>>> f3f8498d28561d2e9972f2cac4bfe836b5ce6c73
   `nom` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `prenom` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -63,6 +71,7 @@ INSERT INTO `clients` (`id`, `nom`, `prenom`, `email`, `tele`, `password`, `crea
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Table structure for table `commande`
 --
 
@@ -79,6 +88,8 @@ CREATE TABLE `commande` (
 -- --------------------------------------------------------
 
 --
+=======
+>>>>>>> f3f8498d28561d2e9972f2cac4bfe836b5ce6c73
 -- Table structure for table `data_rows`
 --
 
@@ -543,6 +554,7 @@ ALTER TABLE `clients`
   ADD UNIQUE KEY `email` (`email`);
 
 --
+<<<<<<< HEAD
 -- Indexes for table `commande`
 --
 ALTER TABLE `commande`
@@ -553,6 +565,8 @@ ALTER TABLE `commande`
   ADD KEY `id_client_2` (`id_client`);
 
 --
+=======
+>>>>>>> f3f8498d28561d2e9972f2cac4bfe836b5ce6c73
 -- Indexes for table `data_rows`
 --
 ALTER TABLE `data_rows`
@@ -674,6 +688,7 @@ ALTER TABLE `article`
 -- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
@@ -681,6 +696,9 @@ ALTER TABLE `clients`
 --
 ALTER TABLE `commande`
   MODIFY `id_commande` int(11) NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+>>>>>>> f3f8498d28561d2e9972f2cac4bfe836b5ce6c73
 
 --
 -- AUTO_INCREMENT for table `data_rows`
@@ -765,6 +783,7 @@ ALTER TABLE `article`
   ADD CONSTRAINT `ck_id_user_article` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`);
 
 --
+<<<<<<< HEAD
 -- Constraints for table `commande`
 --
 ALTER TABLE `commande`
@@ -772,6 +791,8 @@ ALTER TABLE `commande`
   ADD CONSTRAINT `cmd_client` FOREIGN KEY (`id_client`) REFERENCES `clients` (`id`);
 
 --
+=======
+>>>>>>> f3f8498d28561d2e9972f2cac4bfe836b5ce6c73
 -- Constraints for table `data_rows`
 --
 ALTER TABLE `data_rows`
