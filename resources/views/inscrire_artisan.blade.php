@@ -21,6 +21,90 @@
 </head>
 
 <body style="background-color: #999999;">
+    <header  style="background-color:#EDC16B;color:black">
+        <!-- header inner -->
+        <div class="header">
+            <div class="container-fluid">
+                <div class="row">
+                   
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="header_information">
+                            <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarsExample04" aria-controls="navbarsExample04"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarsExample04">
+                                    <ul class="navbar-nav mr-auto">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000')}}"> Accueil </a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Metier
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/vetements')}}">Vêtements</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/bois')}}">Bois</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/batiment')}}">Bâtiment traditionnel</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/maroquinerie')}}">Maroquinerie</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/forge')}}">Fer Forgé</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/poterie')}}">Poterie et pierre</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/tapis')}}">Tapis</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/article_chaussants')}}">Articles chaussants</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/bijouterie')}}">Bijouterie</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/dinanderie')}}">Dinanderie</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/vannerie')}}">Vannerie</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000/#apropos')}}">A propos</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000/#contact')}}">Contact-Nous</a>
+                                        </li>
+                                    </ul>
+
+                                    <div class="btn-group">
+                                        <button type="button" class="btn sign_btn dropdown-toggle"
+                                            data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false"><a>Connecter</a>
+
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item"
+                                                href="{{asset('http://127.0.0.1:8000/admin/login')}}">Artisan</a>
+                                            <a class="dropdown-item"
+                                                href="{{asset('http://127.0.0.1:8000/login_client')}}">Client</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-group">
+                                        <button type="button" class="btn sign_btn dropdown-toggle"
+                                            data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false"><a>inScrire</a>
+
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item"
+                                                href="#">Artisan</a>
+                                            <a class="dropdown-item"
+                                                href="{{asset('http://127.0.0.1:8000/inscrire_client')}}">Client</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
     <div class="limiter">
         <div class="container-login100">
             <div class="login100-more" style="background-image: url('images/bg-01.jpg');"></div>

@@ -80,17 +80,17 @@
                                                 Metier
                                             </a>
                                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                                <li><a class="dropdown-item" href="#">Vêtements</a></li>
-                                                <li><a class="dropdown-item" href="#">Bois</a></li>
-                                                <li><a class="dropdown-item" href="#">Bâtiment traditionnel</a></li>
-                                                <li><a class="dropdown-item" href="#">Maroquinerie</a></li>
-                                                <li><a class="dropdown-item" href="#">Fer Forgé</a></li>
-                                                <li><a class="dropdown-item" href="#">Poterie et pierre</a></li>
-                                                <li><a class="dropdown-item" href="#">Tapis</a></li>
-                                                <li><a class="dropdown-item" href="#">Articles chaussants</a></li>
-                                                <li><a class="dropdown-item" href="#">Bijouterie</a></li>
-                                                <li><a class="dropdown-item" href="#">Dinanderie</a></li>
-                                                <li><a class="dropdown-item" href="#">Vannerie</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/vetements')}}">Vêtements</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/bois')}}">Bois</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/batiment')}}">Bâtiment traditionnel</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/maroquinerie')}}">Maroquinerie</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/forge')}}">Fer Forgé</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/poterie')}}">Poterie et pierre</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/tapis')}}">Tapis</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/article_chaussants')}}">Articles chaussants</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/bijouterie')}}">Bijouterie</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/dinanderie')}}">Dinanderie</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/vannerie')}}">Vannerie</a></li>
                                             </ul>
                                         </li>
                                         <li class="nav-item">
@@ -150,7 +150,7 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="first-slide" src="images/im1.jpg" alt="First slide">
+                <img class="first-slide" src="images/Slider/im1.jpg" alt="First slide">
                 <div class="container">
                     <div class="carousel-caption relative">
                         <a href="#contact">Contact-nous</a>
@@ -158,7 +158,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="second-slide" src="images/im2.jpg" alt="Second slide">
+                <img class="second-slide" src="images/Slider/im2.jpg" alt="Second slide">
                 <div class="container">
                     <div class="carousel-caption relative">
                         <a href="#contact">Contacter-nous</a>
@@ -166,7 +166,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="third-slide" src="images/im3.jpg" alt="Third slide">
+                <img class="third-slide" src="images/slider/im3.jpg" alt="Third slide">
                 <div class="container">
                     <div class="carousel-caption relative">
                         <a href="#contact">Contacter-nous</a>
@@ -245,7 +245,7 @@
                                 <span></span>
                                 <p>Longtemps laissés de côté à l'ère du béton et du «vite fait», les artisans du
                                     bâtiment semblent enfin sortir de l'ombre... </p>
-                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/batiment')}}">Lire la suite <i class="fa fa-arrow-right"
                                         aria-hidden="true"></i></a>
                             </div>
                         </div>
@@ -266,7 +266,7 @@
                                 <p>Le maroquinier travaille le cuir et les matériaux souples pour la fabrication de
                                     sacs, gants, ceintures, portefeuilles...
                                 </p>
-                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/maroquinerie')}}">Lire la suite <i class="fa fa-arrow-right"
                                         aria-hidden="true"></i></a>
                             </div>
                         </div>
@@ -287,7 +287,7 @@
                                 <span></span>
                                 <p>Dans l'artisanat marocain, le fer forgé tient un place très importante. Devenu une
                                     des matières premières les plus utilisés dans ces arts... </p>
-                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/forge')}}">Lire la suite <i class="fa fa-arrow-right"
                                         aria-hidden="true"></i></a>
                             </div>
                         </div>
@@ -308,7 +308,7 @@
                                 <p>La poterie est le premier artisanat de l'histoire de l'humanité. Au Maroc, cet
                                     artisanat mélange l'héritage berbère aux motifs d'inspiration arabo-andalouse...
                                 </p>
-                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/poterie')}}">Lire la suite <i class="fa fa-arrow-right"
                                         aria-hidden="true"></i></a>
                             </div>
                         </div>
@@ -330,7 +330,7 @@
                                 <p>Le tapis traditionnel est un moyen d'expression artistique, la transmission d'un
                                     savoir ancestral. Il est
                                     plutôt de tradition Berbère et très présent dans le sud marocain... </p>
-                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/Tapis')}}">Lire la suite <i class="fa fa-arrow-right"
                                         aria-hidden="true"></i></a>
                             </div>
                         </div>
@@ -351,7 +351,7 @@
                                 <p>le couverture marocaine est un symbole intemporel de culture, de sagesse et de
                                     tradition. Fabriquées avec passion, patience et amour par les femmes des tribus du
                                     Maroc... </p>
-                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/couverture')}}">Lire la suite <i class="fa fa-arrow-right"
                                         aria-hidden="true"></i></a>
                             </div>
                         </div>
@@ -372,7 +372,7 @@
                                 <span></span>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                     ullamco laboris nisi ut aliquip ex ea commodo... </p>
-                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/chaussants')}}">Lire la suite <i class="fa fa-arrow-right"
                                         aria-hidden="true"></i></a>
                             </div>
                         </div>
@@ -393,7 +393,7 @@
                                 <p>Le bijoutier réalise des bijoux en métal (précieux ou non), terre, verre, textile,
                                     bois… en petite série ou en pièce unique. Il travaille la matière selon des
                                     techniques diverses, adaptées au matériau utilisé... </p>
-                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/bijouterie')}}">Lire la suite <i class="fa fa-arrow-right"
                                         aria-hidden="true"></i></a>
                             </div>
                         </div>
@@ -414,7 +414,7 @@
                                 <span></span>
                                 <p>Artisan d'art, le dinandier fabrique des objets utilitaires et décoratifs par
                                     martelage à partir d'une feuille de cuivre, d'étain ou de fer-blanc .... </p>
-                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/dinanderie')}}">Lire la suite <i class="fa fa-arrow-right"
                                         aria-hidden="true"></i></a>
                             </div>
                         </div>
@@ -435,7 +435,7 @@
                                 <p>La vannerie désigne : l'art de tresser des fibres végétales (les matériaux) pour
                                     réaliser des objets très variés (les corbeilles, paniers, mannes et cabas, les
                                     chapeaux, les nattes, les vans,...).</p>
-                                <a class="read_more">Lire la suite <i class="fa fa-arrow-right"
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/vannerie')}}">Lire la suite <i class="fa fa-arrow-right"
                                         aria-hidden="true"></i></a>
                             </div>
                         </div>
@@ -547,11 +547,9 @@
                 </a></li>
         </ul>
         <ul class="menu">
-            <li class="menu_item"><a class="menu_link" href="#">Home</a></li>
-            <li class="menu_item "><a class="menu_link" href="#">About</a></li>
-            <li class="menu_item"><a class="menu_link" href="#">Services</a></li>
-            <li class="menu_item"><a class="menu_link" href="#">Team</a></li>
-            <li class="menu_item"><a class="menu_link" href="#">Contact</a></li>
+            <li class="menu_item"><a class="menu_link" href="#">Accueil</a></li>
+            <li class="menu_item "><a class="menu_link" href="#apropos">A propos</a></li>
+            <li class="menu_item"><a class="menu_link" href="#contact">Contact-nous</a></li>
 
         </ul>
         <p>&copy;EL MAALAM | All Rights Reserved</p>

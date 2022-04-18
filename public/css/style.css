@@ -918,7 +918,7 @@ button {
      border: none;
      cursor: pointer;
      opacity: 100%;
-     transition: opacity 0.5s;
+     transition: opacity 0.2s;
    }
    
    .back-to-top:hover {
@@ -973,10 +973,9 @@ button {
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
-
-
 .social-icon,
 .menu {
+
   position: relative;
   display: flex;
   justify-content: center;

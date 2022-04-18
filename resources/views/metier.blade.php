@@ -27,6 +27,11 @@
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
         media="screen">
+    <!-- le choix du font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,500;1,300;1,400&display=swap"
+        rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -67,7 +72,7 @@
                                 <div class="collapse navbar-collapse" id="navbarsExample04">
                                     <ul class="navbar-nav mr-auto">
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000/')}}"> Accueil </a>
+                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000')}}"> Accueil </a>
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
@@ -75,24 +80,24 @@
                                                 Metier
                                             </a>
                                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                                <li><a class="dropdown-item" href="#">Vêtements</a></li>
-                                                <li><a class="dropdown-item" href="#">Bois</a></li>
-                                                <li><a class="dropdown-item" href="#">Bâtiment traditionnel</a></li>
-                                                <li><a class="dropdown-item" href="#">Maroquinerie</a></li>
-                                                <li><a class="dropdown-item" href="#">Fer Forgé</a></li>
-                                                <li><a class="dropdown-item" href="#">Poterie et pierre</a></li>
-                                                <li><a class="dropdown-item" href="#">Tapis</a></li>
-                                                <li><a class="dropdown-item" href="#">Articles chaussants</a></li>
-                                                <li><a class="dropdown-item" href="#">Bijouterie</a></li>
-                                                <li><a class="dropdown-item" href="#">Dinanderie</a></li>
-                                                <li><a class="dropdown-item" href="#">Vannerie</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/vetements')}}">Vêtements</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/bois')}}">Bois</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/batiment')}}">Bâtiment traditionnel</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/maroquinerie')}}">Maroquinerie</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/forge')}}">Fer Forgé</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/poterie')}}">Poterie et pierre</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/tapis')}}">Tapis</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/article_chaussants')}}">Articles chaussants</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/bijouterie')}}">Bijouterie</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/dinanderie')}}">Dinanderie</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/vannerie')}}">Vannerie</a></li>
                                             </ul>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#apropos">A propos</a>
+                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000/#apropos')}}">A propos</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#contact">Contact-Nous</a>
+                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000/#contact')}}">Contact-Nous</a>
                                         </li>
                                     </ul>
 
@@ -118,9 +123,9 @@
                                         </button>
                                         <div class="dropdown-menu">
                                             <a class="dropdown-item"
-                                                href="{{asset('http://127.0.0.1:8000/inscription_art')}}">Artisan</a>
+                                                href="{{asset('http://127.0.0.1:8000/inscrire_artisan')}}">Artisan</a>
                                             <a class="dropdown-item"
-                                                href="{{asset('http://127.0.0.1:8000/inscription_cl')}}">Client</a>
+                                                href="{{asset('http://127.0.0.1:8000/inscrire_client')}}">Client</a>
                                         </div>
                                     </div>
                                 </div>
@@ -145,7 +150,7 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="first-slide" src="http://127.0.0.1:8000/images/im1.jpg" alt="First slide">
+                <img class="first-slide" src="http://127.0.0.1:8000/images/Slider/im1.jpg" alt="First slide">
                 <div class="container">
                     <div class="carousel-caption relative">
                         <h1> <span>ART</span> number 1</h1>
@@ -154,7 +159,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="second-slide" src="http://127.0.0.1:8000/images/im2.jpg" alt="Second slide">
+                <img class="second-slide" src="http://127.0.0.1:8000/images/Slider/im2.jpg" alt="Second slide">
                 <div class="container">
                     <div class="carousel-caption relative">
                         <h1> <span>ART</span> number 2</h1>
@@ -223,12 +228,9 @@
                 </a></li>
         </ul>
         <ul class="menu">
-            <li class="menu_item"><a class="menu_link" href="#">Home</a></li>
-            <li class="menu_item "><a class="menu_link" href="#">About</a></li>
-            <li class="menu_item"><a class="menu_link" href="#">Services</a></li>
-            <li class="menu_item"><a class="menu_link" href="#">Team</a></li>
-            <li class="menu_item"><a class="menu_link" href="#">Contact</a></li>
-
+            <li class="menu_item"><a class="menu_link" href="{{asset('http://127.0.0.1:8000')}}">Accueil</a></li>
+            <li class="menu_item "><a class="menu_link" href="{{asset('http://127.0.0.1:8000/#apropos')}}">A propos</a></li>
+            <li class="menu_item"><a class="menu_link" href="{{asset('http://127.0.0.1:8000/#contact')}}">Contact-nous</a></li>
         </ul>
         <p>&copy;EL MAALAM | All Rights Reserved</p>
     </footer>
@@ -251,11 +253,19 @@
     <script src="http://127.0.0.1:8000/js/popper.min.js"></script>
     <script src="http://127.0.0.1:8000/js/bootstrap.bundle.min.js"></script>
     <script src="http://127.0.0.1:8000/js/jquery-3.0.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
+    </script>
 
     <!-- sidebar -->
     <script src="http://127.0.0.1:8000/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="http://127.0.0.1:8000/js/custom.js"></script>
     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+    <!-- footer-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

@@ -20,22 +20,13 @@
 </head>
 <body style="background-color: #999999;">
 		
-	<header>
+	<header  style="background-color:#EDC16B;color:black">
         <!-- header inner -->
         <div class="header">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-                        <div class="full">
-                            <div class="center-desk">
-                                <div class="logo">
-                                    <a href="{{asset('http://127.0.0.1:8000')}}"><img src="images/logo.png"
-                                            alt="logo_artisana" /></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                   
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                         <div class="header_information">
                             <nav class="navigation navbar navbar-expand-md navbar-dark ">
                                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -46,7 +37,7 @@
                                 <div class="collapse navbar-collapse" id="navbarsExample04">
                                     <ul class="navbar-nav mr-auto">
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000/')}}"> Accueil </a>
+                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000')}}"> Accueil </a>
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
@@ -54,24 +45,24 @@
                                                 Metier
                                             </a>
                                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                                <li><a class="dropdown-item" href="#">Vêtements</a></li>
-                                                <li><a class="dropdown-item" href="#">Bois</a></li>
-                                                <li><a class="dropdown-item" href="#">Bâtiment traditionnel</a></li>
-                                                <li><a class="dropdown-item" href="#">Maroquinerie</a></li>
-                                                <li><a class="dropdown-item" href="#">Fer Forgé</a></li>
-                                                <li><a class="dropdown-item" href="#">Poterie et pierre</a></li>
-                                                <li><a class="dropdown-item" href="#">Tapis</a></li>
-                                                <li><a class="dropdown-item" href="#">Articles chaussants</a></li>
-                                                <li><a class="dropdown-item" href="#">Bijouterie</a></li>
-                                                <li><a class="dropdown-item" href="#">Dinanderie</a></li>
-                                                <li><a class="dropdown-item" href="#">Vannerie</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/vetements')}}">Vêtements</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/bois')}}">Bois</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/batiment')}}">Bâtiment traditionnel</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/maroquinerie')}}">Maroquinerie</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/forge')}}">Fer Forgé</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/poterie')}}">Poterie et pierre</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/tapis')}}">Tapis</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/article_chaussants')}}">Articles chaussants</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/bijouterie')}}">Bijouterie</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/dinanderie')}}">Dinanderie</a></li>
+                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/vannerie')}}">Vannerie</a></li>
                                             </ul>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#apropos">A propos</a>
+                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000/#apropos')}}">A propos</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#contact">Contact-Nous</a>
+                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000/#contact')}}">Contact-Nous</a>
                                         </li>
                                     </ul>
 
@@ -97,9 +88,9 @@
                                         </button>
                                         <div class="dropdown-menu">
                                             <a class="dropdown-item"
-                                                href="{{asset('http://127.0.0.1:8000/inscription_art')}}">Artisan</a>
+                                                href="{{asset('http://127.0.0.1:8000/inscrire_artisan')}}">Artisan</a>
                                             <a class="dropdown-item"
-                                                href="{{asset('http://127.0.0.1:8000/inscription_cl')}}">Client</a>
+                                                href="#">Client</a>
                                         </div>
                                     </div>
                                 </div>
@@ -121,7 +112,7 @@
 				<form class="login100-form validate-form" action="ajouter_client" method="POST" enctype="multipart/form-data">
 						@csrf
 					<span class="login100-form-title p-b-59">
-						S'inscrire
+						S'inscrire Client
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate="Le nom est requis">
