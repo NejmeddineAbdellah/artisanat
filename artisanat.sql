@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Generation Time: Apr 18, 2022 at 03:09 PM
-=======
--- Generation Time: Apr 18, 2022 at 01:06 AM
->>>>>>> f3f8498d28561d2e9972f2cac4bfe836b5ce6c73
+-- Generation Time: Apr 20, 2022 at 04:02 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -28,15 +24,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `article`
+-- Table structure for table `articles`
 --
 
-CREATE TABLE `article` (
-  `id_article` bigint(20) UNSIGNED NOT NULL,
+CREATE TABLE `articles` (
+  `id` bigint(20) UNSIGNED NOT NULL,
   `id_user` bigint(20) UNSIGNED NOT NULL,
   `description_article` varchar(200) DEFAULT NULL,
-  `img_article` varchar(200) DEFAULT NULL
+  `img_article` varchar(200) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `articles`
+--
+
+INSERT INTO `articles` (`id`, `id_user`, `description_article`, `img_article`, `created_at`, `updated_at`) VALUES
+(1, 3, 'qedsfdhgfjghkjlkmlkùmkjhgfdsghjklk', '[\"articles\\\\April2022\\\\ksU9ZF8SvVLh27B0naHU.png\",\"articles\\\\April2022\\\\o3pDOBXC1qJ4xRybMmwB.png\"]', '2022-04-19 12:19:00', '2022-04-19 13:09:29');
 
 -- --------------------------------------------------------
 
@@ -45,11 +50,7 @@ CREATE TABLE `article` (
 --
 
 CREATE TABLE `clients` (
-<<<<<<< HEAD
   `id` bigint(20) NOT NULL,
-=======
-  `id` bigint(20) UNSIGNED NOT NULL,
->>>>>>> f3f8498d28561d2e9972f2cac4bfe836b5ce6c73
   `nom` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `prenom` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -66,30 +67,29 @@ CREATE TABLE `clients` (
 INSERT INTO `clients` (`id`, `nom`, `prenom`, `email`, `tele`, `password`, `created_at`, `updated_at`) VALUES
 (6, 'NEJMEDDINE', 'ABDELLAH', 'crissnajm1998@gmail.com', '0671012945', '$2y$10$0QQqRGO7su61wWQE40d.AOCkXQ0CIFRJeJV5IW2G1PYuZoHfGb0wG', '2022-04-14 01:09:20', '2022-04-14 01:09:20'),
 (8, 'cl1', 'cl1', 'cl@cl.com', '06666666666', '$2y$10$jw3RyaTzpFsiGQaRVYIxyeb1VwT5v7VE6ukwFNB7lZbwuAGdvE6D2', '2022-04-14 10:16:39', '2022-04-14 10:16:39'),
-(11, 'client01', 'client01', 'cl@c1l.com', '0555555555', '$2y$10$fbdfpJ1.f5pfYWpIcIsRZ.8mQHAaEjgOGTYaXxlO2g0FtzSy6Xl02', '2022-04-14 11:10:19', '2022-04-14 11:10:19');
+(11, 'client01', 'client01', 'cl@c1l.com', '0555555555', '$2y$10$fbdfpJ1.f5pfYWpIcIsRZ.8mQHAaEjgOGTYaXxlO2g0FtzSy6Xl02', '2022-04-14 11:10:19', '2022-04-14 11:10:19'),
+(12, 'abdellah', 'abdellah', 'abdellah@code.com', '00000000', '$2y$10$XqayS4shls1i/x0OrI1I1u1S9LUviwJohJIVR8ZGJIgWXiVzEX5qm', '2022-04-19 22:56:58', '2022-04-19 22:56:58'),
+(13, 'a', 'z', 'a@a.com', '01', '$2y$10$75zIL2puREQb9Ts3D4c0Q.OB/elh69IEesDgWjkl8JwC/8AXSpnIu', '2022-04-19 23:07:24', '2022-04-19 23:07:24');
 
 -- --------------------------------------------------------
 
 --
-<<<<<<< HEAD
 -- Table structure for table `commande`
 --
 
 CREATE TABLE `commande` (
-  `id_commande` int(11) NOT NULL,
-  `description_commande` varchar(200) NOT NULL,
-  `image` varchar(100) DEFAULT NULL,
+  `id` int(11) NOT NULL,
   `id_client` bigint(20) NOT NULL,
   `id_artisan` bigint(20) UNSIGNED NOT NULL,
   `titre_commande` varchar(100) NOT NULL,
+  `description_commande` varchar(200) NOT NULL,
+  `image` varchar(100) DEFAULT NULL,
   `date_commande` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
-=======
->>>>>>> f3f8498d28561d2e9972f2cac4bfe836b5ce6c73
 -- Table structure for table `data_rows`
 --
 
@@ -139,7 +139,25 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (23, 1, 'nom', 'text', 'Nom', 1, 1, 1, 1, 1, 1, '{}', 12),
 (24, 1, 'prenom', 'text', 'Prenom', 1, 1, 1, 1, 1, 1, '{}', 13),
 (25, 1, 'phone', 'text', 'Phone', 1, 1, 1, 1, 1, 1, '{}', 14),
-(26, 1, 'metier', 'select_dropdown', 'Metier', 0, 1, 1, 1, 1, 1, '{}', 15);
+(26, 1, 'metier', 'select_dropdown', 'Metier', 0, 1, 1, 1, 1, 1, '{}', 15),
+(27, 9, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(28, 9, 'nom', 'text', 'Nom', 1, 1, 1, 1, 1, 1, '{}', 2),
+(29, 9, 'prenom', 'text', 'Prenom', 1, 1, 1, 1, 1, 1, '{}', 3),
+(30, 9, 'email', 'text', 'Email', 1, 1, 1, 1, 1, 1, '{}', 4),
+(31, 9, 'tele', 'text', 'Tele', 1, 1, 1, 1, 1, 1, '{}', 5),
+(32, 9, 'password', 'text', 'Password', 1, 1, 1, 1, 1, 1, '{}', 6),
+(33, 9, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 7),
+(34, 9, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8),
+(39, 20, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(40, 20, 'utilisateur', 'text', 'Utilisateur', 1, 1, 1, 1, 1, 1, '{}', 2),
+(41, 20, 'email', 'text', 'Email', 1, 1, 1, 1, 1, 1, '{}', 3),
+(42, 20, 'description', 'text_area', 'Description', 1, 1, 1, 1, 1, 1, '{}', 4),
+(43, 21, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(44, 21, 'id_user', 'text', 'Id User', 1, 1, 1, 1, 1, 1, '{}', 2),
+(45, 21, 'description_article', 'text_area', 'Description Article', 0, 1, 1, 1, 1, 1, '{}', 3),
+(46, 21, 'img_article', 'multiple_images', 'Img Article', 0, 1, 1, 1, 1, 1, '{}', 4),
+(47, 21, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 5),
+(48, 21, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 6);
 
 -- --------------------------------------------------------
 
@@ -172,7 +190,10 @@ CREATE TABLE `data_types` (
 INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `display_name_plural`, `icon`, `model_name`, `policy_name`, `controller`, `description`, `generate_permissions`, `server_side`, `details`, `created_at`, `updated_at`) VALUES
 (1, 'users', 'users', 'User', 'Users', 'voyager-person', 'TCG\\Voyager\\Models\\User', 'TCG\\Voyager\\Policies\\UserPolicy', 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController', NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"desc\",\"default_search_key\":null,\"scope\":null}', '2022-03-23 16:35:57', '2022-04-16 13:25:57'),
 (2, 'menus', 'menus', 'Menu', 'Menus', 'voyager-list', 'TCG\\Voyager\\Models\\Menu', NULL, '', '', 1, 0, NULL, '2022-03-23 16:35:57', '2022-03-23 16:35:57'),
-(3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, 'TCG\\Voyager\\Http\\Controllers\\VoyagerRoleController', '', 1, 0, NULL, '2022-03-23 16:35:57', '2022-03-23 16:35:57');
+(3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, 'TCG\\Voyager\\Http\\Controllers\\VoyagerRoleController', '', 1, 0, NULL, '2022-03-23 16:35:57', '2022-03-23 16:35:57'),
+(9, 'clients', 'clients', 'Client', 'Clients', NULL, 'App\\Models\\Clients', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-04-18 13:34:32', '2022-04-18 13:34:32'),
+(20, 'notes', 'notes', 'Note', 'Notes', NULL, 'App\\Models\\Notes', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-04-19 12:12:25', '2022-04-19 12:12:25'),
+(21, 'articles', 'articles', 'Article', 'Articles', NULL, 'App\\Models\\Articles', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2022-04-19 12:13:42', '2022-04-19 12:14:18');
 
 -- --------------------------------------------------------
 
@@ -238,15 +259,18 @@ CREATE TABLE `menu_items` (
 
 INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class`, `color`, `parent_id`, `order`, `created_at`, `updated_at`, `route`, `parameters`) VALUES
 (1, 1, 'Dashboard', '', '_self', 'voyager-boat', NULL, NULL, 1, '2022-03-23 16:35:57', '2022-03-23 16:35:57', 'voyager.dashboard', NULL),
-(2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 5, '2022-03-23 16:35:57', '2022-03-23 16:35:57', 'voyager.media.index', NULL),
+(2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 4, '2022-03-23 16:35:57', '2022-04-18 13:49:16', 'voyager.media.index', NULL),
 (3, 1, 'Users', '', '_self', 'voyager-person', NULL, NULL, 3, '2022-03-23 16:35:57', '2022-03-23 16:35:57', 'voyager.users.index', NULL),
 (4, 1, 'Roles', '', '_self', 'voyager-lock', NULL, NULL, 2, '2022-03-23 16:35:57', '2022-03-23 16:35:57', 'voyager.roles.index', NULL),
-(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 9, '2022-03-23 16:35:57', '2022-03-23 16:35:57', NULL, NULL),
-(6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 5, 10, '2022-03-23 16:35:57', '2022-03-23 16:35:57', 'voyager.menus.index', NULL),
-(7, 1, 'Database', '', '_self', 'voyager-data', NULL, 5, 11, '2022-03-23 16:35:57', '2022-03-23 16:35:57', 'voyager.database.index', NULL),
-(8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 12, '2022-03-23 16:35:57', '2022-03-23 16:35:57', 'voyager.compass.index', NULL),
-(9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 13, '2022-03-23 16:35:57', '2022-03-23 16:35:57', 'voyager.bread.index', NULL),
-(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 14, '2022-03-23 16:35:57', '2022-03-23 16:35:57', 'voyager.settings.index', NULL);
+(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 8, '2022-03-23 16:35:57', '2022-04-19 23:29:31', NULL, NULL),
+(6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 5, 1, '2022-03-23 16:35:57', '2022-04-18 13:49:16', 'voyager.menus.index', NULL),
+(7, 1, 'Database', '', '_self', 'voyager-data', NULL, 5, 2, '2022-03-23 16:35:57', '2022-04-18 13:49:16', 'voyager.database.index', NULL),
+(8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 3, '2022-03-23 16:35:57', '2022-04-18 13:49:16', 'voyager.compass.index', NULL),
+(9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 4, '2022-03-23 16:35:57', '2022-04-18 13:49:16', 'voyager.bread.index', NULL),
+(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 9, '2022-03-23 16:35:57', '2022-04-19 23:29:31', 'voyager.settings.index', NULL),
+(11, 1, 'Clients', '', '_self', 'voyager-people', '#000000', NULL, 5, '2022-04-18 13:34:32', '2022-04-19 23:29:28', 'voyager.clients.index', 'null'),
+(14, 1, 'Notes', '', '_self', 'voyager-receipt', '#000000', NULL, 6, '2022-04-19 12:12:26', '2022-04-19 23:29:30', 'voyager.notes.index', 'null'),
+(15, 1, 'Articles', '', '_self', 'voyager-hammer', '#000000', NULL, 7, '2022-04-19 12:13:42', '2022-04-19 23:29:31', 'voyager.articles.index', 'null');
 
 -- --------------------------------------------------------
 
@@ -290,6 +314,26 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (23, '2019_08_19_000000_create_failed_jobs_table', 1),
 (24, '2019_12_14_000001_create_personal_access_tokens_table', 1),
 (25, '2022_04_14_001001_create_clients_table', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `notes`
+--
+
+CREATE TABLE `notes` (
+  `id` int(11) NOT NULL,
+  `utilisateur` varchar(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `description` varchar(300) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `notes`
+--
+
+INSERT INTO `notes` (`id`, `utilisateur`, `email`, `description`) VALUES
+(1, 'sqdfs', 'crissnajm1998@gmail.com', 'dghfjghkj');
 
 -- --------------------------------------------------------
 
@@ -346,7 +390,22 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (22, 'read_settings', 'settings', '2022-03-23 16:35:57', '2022-03-23 16:35:57'),
 (23, 'edit_settings', 'settings', '2022-03-23 16:35:57', '2022-03-23 16:35:57'),
 (24, 'add_settings', 'settings', '2022-03-23 16:35:57', '2022-03-23 16:35:57'),
-(25, 'delete_settings', 'settings', '2022-03-23 16:35:57', '2022-03-23 16:35:57');
+(25, 'delete_settings', 'settings', '2022-03-23 16:35:57', '2022-03-23 16:35:57'),
+(26, 'browse_clients', 'clients', '2022-04-18 13:34:32', '2022-04-18 13:34:32'),
+(27, 'read_clients', 'clients', '2022-04-18 13:34:32', '2022-04-18 13:34:32'),
+(28, 'edit_clients', 'clients', '2022-04-18 13:34:32', '2022-04-18 13:34:32'),
+(29, 'add_clients', 'clients', '2022-04-18 13:34:32', '2022-04-18 13:34:32'),
+(30, 'delete_clients', 'clients', '2022-04-18 13:34:32', '2022-04-18 13:34:32'),
+(41, 'browse_notes', 'notes', '2022-04-19 12:12:25', '2022-04-19 12:12:25'),
+(42, 'read_notes', 'notes', '2022-04-19 12:12:25', '2022-04-19 12:12:25'),
+(43, 'edit_notes', 'notes', '2022-04-19 12:12:25', '2022-04-19 12:12:25'),
+(44, 'add_notes', 'notes', '2022-04-19 12:12:25', '2022-04-19 12:12:25'),
+(45, 'delete_notes', 'notes', '2022-04-19 12:12:25', '2022-04-19 12:12:25'),
+(46, 'browse_articles', 'articles', '2022-04-19 12:13:42', '2022-04-19 12:13:42'),
+(47, 'read_articles', 'articles', '2022-04-19 12:13:42', '2022-04-19 12:13:42'),
+(48, 'edit_articles', 'articles', '2022-04-19 12:13:42', '2022-04-19 12:13:42'),
+(49, 'add_articles', 'articles', '2022-04-19 12:13:42', '2022-04-19 12:13:42'),
+(50, 'delete_articles', 'articles', '2022-04-19 12:13:42', '2022-04-19 12:13:42');
 
 -- --------------------------------------------------------
 
@@ -392,7 +451,27 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (22, 1),
 (23, 1),
 (24, 1),
-(25, 1);
+(25, 1),
+(26, 1),
+(27, 1),
+(28, 1),
+(29, 1),
+(30, 1),
+(41, 1),
+(42, 1),
+(43, 1),
+(44, 1),
+(45, 1),
+(46, 1),
+(46, 3),
+(47, 1),
+(47, 3),
+(48, 1),
+(48, 3),
+(49, 1),
+(49, 3),
+(50, 1),
+(50, 3);
 
 -- --------------------------------------------------------
 
@@ -432,7 +511,6 @@ CREATE TABLE `roles` (
 
 INSERT INTO `roles` (`id`, `name`, `display_name`, `created_at`, `updated_at`) VALUES
 (1, 'admin', 'Administrator', '2022-03-23 16:35:57', '2022-03-23 16:35:57'),
-(2, 'user', 'Normal User', '2022-03-23 16:35:57', '2022-03-23 16:35:57'),
 (3, 'artisan', 'Artisan', '2022-03-31 21:25:24', '2022-03-31 21:25:24'),
 (4, 'Inactive', 'Inactive_user', '2022-04-16 13:23:58', '2022-04-16 13:23:58');
 
@@ -515,7 +593,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `email_verified_at`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`, `nom`, `prenom`, `telephone`, `metier`) VALUES
-(1, 1, 'Admin', 'admin@admin.com', 'users/default.png', NULL, '$2y$10$lkPFrhB5gRWt0MZl3IgFs.H1mc23JpQfToSOYDa3ENwJMZYRNcbAa', 'zJ5R80VUPHulzL8Zf5vY8fNqEzx5TpxcSwRfnH4PNIbSAU5OKh1yP9KnsWfZ', NULL, '2022-03-23 16:36:51', '2022-03-23 16:36:51', '', '', '', NULL),
+(1, 1, 'Admin', 'admin@admin.com', 'users/default.png', NULL, '$2y$10$lkPFrhB5gRWt0MZl3IgFs.H1mc23JpQfToSOYDa3ENwJMZYRNcbAa', '9aOpzlNVe20NOJ8MUQ9jyr1SrMKcHgmcWa3MxB4LzWgEWiKEsaJlH7UoT05l', NULL, '2022-03-23 16:36:51', '2022-03-23 16:36:51', '', '', '', NULL),
 (2, 3, 'Artisan1', 'ar1@admin.com', 'users/default.png', NULL, '$2y$10$PVJVizhCoYC4brQzhT9HUOOtswxpBKFrZS68cD.tA8XkVx0ssEvD.', NULL, '{\"locale\":\"en\"}', '2022-03-31 21:25:47', '2022-03-31 21:25:47', '', '', '', NULL),
 (3, 4, 'artisan01', 'art01@admin.com', 'users/default.png', NULL, '$2y$10$nNaCAmbkZbwE4M/mS6bMt.5ZCDNGGr.ORGWmoiI3bsine9QjR4Q3C', NULL, '{\"locale\":\"fr\"}', '2022-04-16 13:49:27', '2022-04-16 13:49:27', 'nejmeddine', 'abdellah', '066662552', 'bois'),
 (4, 4, 'artisan02', 'art02@admin.com', 'users/default.png', NULL, '$2y$10$931xgg1661Yq3X7itMuoQu59qkJQAF6QXZHX1N7GcGSsYBbR0Bzvy', NULL, '{\"locale\":\"fr\"}', '2022-04-16 13:52:56', '2022-04-16 13:52:56', 'nejm', 'abdellah', '06666222', 'bois'),
@@ -540,10 +618,10 @@ CREATE TABLE `user_roles` (
 --
 
 --
--- Indexes for table `article`
+-- Indexes for table `articles`
 --
-ALTER TABLE `article`
-  ADD PRIMARY KEY (`id_article`),
+ALTER TABLE `articles`
+  ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id_user_fk` (`id_user`);
 
 --
@@ -554,19 +632,16 @@ ALTER TABLE `clients`
   ADD UNIQUE KEY `email` (`email`);
 
 --
-<<<<<<< HEAD
 -- Indexes for table `commande`
 --
 ALTER TABLE `commande`
-  ADD PRIMARY KEY (`id_commande`),
+  ADD PRIMARY KEY (`id`),
   ADD KEY `id_cl` (`id_client`),
   ADD KEY `id_art` (`id_artisan`),
   ADD KEY `id_client` (`id_client`),
   ADD KEY `id_client_2` (`id_client`);
 
 --
-=======
->>>>>>> f3f8498d28561d2e9972f2cac4bfe836b5ce6c73
 -- Indexes for table `data_rows`
 --
 ALTER TABLE `data_rows`
@@ -606,6 +681,12 @@ ALTER TABLE `menu_items`
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `notes`
+--
+ALTER TABLE `notes`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -679,38 +760,34 @@ ALTER TABLE `user_roles`
 --
 
 --
--- AUTO_INCREMENT for table `article`
+-- AUTO_INCREMENT for table `articles`
 --
-ALTER TABLE `article`
-  MODIFY `id_article` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE `articles`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
-<<<<<<< HEAD
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `commande`
 --
 ALTER TABLE `commande`
-  MODIFY `id_commande` int(11) NOT NULL AUTO_INCREMENT;
-=======
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
->>>>>>> f3f8498d28561d2e9972f2cac4bfe836b5ce6c73
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -728,7 +805,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT for table `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -737,10 +814,16 @@ ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
+-- AUTO_INCREMENT for table `notes`
+--
+ALTER TABLE `notes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -777,13 +860,12 @@ ALTER TABLE `users`
 --
 
 --
--- Constraints for table `article`
+-- Constraints for table `articles`
 --
-ALTER TABLE `article`
+ALTER TABLE `articles`
   ADD CONSTRAINT `ck_id_user_article` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`);
 
 --
-<<<<<<< HEAD
 -- Constraints for table `commande`
 --
 ALTER TABLE `commande`
@@ -791,8 +873,6 @@ ALTER TABLE `commande`
   ADD CONSTRAINT `cmd_client` FOREIGN KEY (`id_client`) REFERENCES `clients` (`id`);
 
 --
-=======
->>>>>>> f3f8498d28561d2e9972f2cac4bfe836b5ce6c73
 -- Constraints for table `data_rows`
 --
 ALTER TABLE `data_rows`
