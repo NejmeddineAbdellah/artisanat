@@ -32,9 +32,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,500;1,300;1,400&display=swap"
         rel="stylesheet">
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
 </head>
 <!-- body -->
 
@@ -497,18 +495,19 @@
                     </div>
                 </div>
                 <div class="col-md-6 offset-md-3">
-                    <form id="request" class="main_form">
+                    <form id="request" class="main_form" action="ajouter_note" method="POST">
+                    @csrf
                         <div class="row">
                             <div class="col-md-6">
-                                <input class="contactus" placeholder="Nom et Prenom" type="texte" name="Full Name">
+                                <input class="contactus" placeholder="Nom et Prenom" type="texte" name="user">
                             </div>
 
                             <div class="col-md-6">
-                                <input class="contactus" placeholder="Email" type="email" name="Email">
+                                <input class="contactus" placeholder="Email" type="email" name="email">
                             </div>
 
                             <div class="col-md-12">
-                                <input class="contactus" placeholder="objet" type="textarea" name="Votre message">
+                                <input class="contactus" placeholder="objet" type="textarea" name="msg">
                             </div>
  
                             </div>

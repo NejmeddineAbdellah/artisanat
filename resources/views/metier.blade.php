@@ -55,7 +55,7 @@
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="{{asset('http://127.0.0.1:8000')}}"><img src="images/logo.png"
+                                    <a href="{{asset('http://127.0.0.1:8000')}}"><img src="http://127.0.0.1:8000/images/logo.png"
                                             alt="logo_artisana" /></a>
                                 </div>
                             </div>

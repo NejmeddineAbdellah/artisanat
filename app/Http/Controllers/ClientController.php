@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Clients;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
-
+use Symfony\Component\Mime\Email;
 
 class ClientController extends Controller
 {
@@ -30,14 +32,19 @@ class ClientController extends Controller
 
     public function clientlogin(Request $request)
     {   
-        $email = $request->email;
-        $password = $request->pass;
-        if (DB::table('clients')->where(['email' => $email, 'password' => $password])->exists()) 
-        {
-            // ...
-            return view("index");
-        }
-        
+     
+
+       $cl = Clients::where('email',$request->input('email'))->get();
+
+
+                if (Hash::check($request->input('password'),$cl[0]->password)) {
+                   $request->session()->put('cient',$cl[0]->id);
+                    return redirect('/');
+                }
+                else {
+                     echo "Error mot de pass incorrects !";
+                }    
+                
     }
 
     
@@ -77,7 +84,7 @@ class ClientController extends Controller
         $client->prenom=$prenom;
         $client->email=$email;
         $client->tele=$telephone;
-        $client->password=bcrypt($password);
+        $client->password=Hash::make($password);
         
         $client->save();
         
