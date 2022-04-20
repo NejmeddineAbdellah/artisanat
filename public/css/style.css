@@ -388,12 +388,7 @@ button {
 
 /*-- header area --*/
 
-.login{
-display: none;
-}
-.logout{
-     
-}
+
 .header {
      width: 100%;
      background: #fff;

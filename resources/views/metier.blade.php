@@ -101,33 +101,49 @@
                                         </li>
                                     </ul>
 
-                                    <div class="btn-group">
-                                        <button type="button" class="btn sign_btn dropdown-toggle"
-                                            data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false"><a>Connecter</a>
+                                    <?php
+                                           if (session()->has('client')) {
+                                               ?>
+                                               <div class="logout btn">
+                                               {{session('client')}}
+                                               <button type="button" class="btn deconnecter" aria-haspopup="true"
+                                                   aria-expanded="false"><a
+                                                       href=" {{asset('http://127.0.0.1:8000/deconnect')}}">Deconnecter</a>
 
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item"
-                                                href="{{asset('http://127.0.0.1:8000/admin/login')}}">Artisan</a>
-                                            <a class="dropdown-item"
-                                                href="{{asset('http://127.0.0.1:8000/login_client')}}">Client</a>
-                                        </div>
-                                    </div>
+                                               </button>
+                                           </div>
+                                           <?php } else {?>
+                                               <div class="login">
+                                               <div class="btn-group ">
+                                                   <button type="button" class="btn sign_btn dropdown-toggle"
+                                                       data-toggle="dropdown" aria-haspopup="true"
+                                                       aria-expanded="false"><a>Connecter</a>
+       
+                                                   </button>
+                                                   <div class="dropdown-menu">
+                                                       <a class="dropdown-item"
+                                                           href="{{asset('http://127.0.0.1:8000/admin/login')}}">Artisan</a>
+                                                       <a class="dropdown-item"
+                                                           href="{{asset('http://127.0.0.1:8000/login_client')}}">Client</a>
+                                                   </div>
+                                               </div>
+       
+                                               <div class="btn-group">
+                                                   <button type="button" class="btn sign_btn dropdown-toggle"
+                                                       data-toggle="dropdown" aria-haspopup="true"
+                                                       aria-expanded="false"><a>inScrire</a>
+       
+                                                   </button>
+                                                   <div class="dropdown-menu">
+                                                       <a class="dropdown-item"
+                                                           href="{{asset('http://127.0.0.1:8000/inscrire_artisan')}}">Artisan</a>
+                                                       <a class="dropdown-item"
+                                                           href="{{asset('http://127.0.0.1:8000/inscrire_client')}}">Client</a>
+                                                   </div>
+                                               </div>
+                                           </div>
 
-                                    <div class="btn-group">
-                                        <button type="button" class="btn sign_btn dropdown-toggle"
-                                            data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false"><a>inScrire</a>
-
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item"
-                                                href="{{asset('http://127.0.0.1:8000/inscrire_artisan')}}">Artisan</a>
-                                            <a class="dropdown-item"
-                                                href="{{asset('http://127.0.0.1:8000/inscrire_client')}}">Client</a>
-                                        </div>
-                                    </div>
+                                           <?php } ?>
                                 </div>
                             </nav>
                         </div>
