@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
-use Symfony\Component\Mime\Email;
+
 
 class ClientController extends Controller
 {
@@ -38,7 +38,8 @@ class ClientController extends Controller
 
 
                 if (Hash::check($request->input('password'),$cl[0]->password)) {
-                   $request->session()->put('cient',$cl[0]->id);
+                   $request->session()->put('client',$cl[0]->nom);
+                   
                     return redirect('/');
                 }
                 else {
@@ -47,6 +48,13 @@ class ClientController extends Controller
                 
     }
 
+    public function clientlogout(Request $request)  
+    {
+        if (session()->has('client')) {
+            session()->pull('client');
+        }
+        return redirect('/');
+    }
     
 
 

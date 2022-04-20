@@ -10,9 +10,17 @@ class MainController extends Controller
 {
     
 
-    public function accueil()
+    public function accueil(Request $request)
     {
-        return view("index");
+       // $value = $request->session()->pull('client');
+
+        
+
+            return view("index");
+
+        
+
+     
     }
 
 }

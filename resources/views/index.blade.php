@@ -78,17 +78,39 @@
                                                 Metier
                                             </a>
                                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/vetements')}}">Vêtements</a></li>
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/bois')}}">Bois</a></li>
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/batiment')}}">Bâtiment traditionnel</a></li>
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/maroquinerie')}}">Maroquinerie</a></li>
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/forge')}}">Fer Forgé</a></li>
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/poterie')}}">Poterie et pierre</a></li>
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/tapis')}}">Tapis</a></li>
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/article_chaussants')}}">Articles chaussants</a></li>
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/bijouterie')}}">Bijouterie</a></li>
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/dinanderie')}}">Dinanderie</a></li>
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/vannerie')}}">Vannerie</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/vetements')}}">Vêtements</a>
+                                                </li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/bois')}}">Bois</a>
+                                                </li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/batiment')}}">Bâtiment
+                                                        traditionnel</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/maroquinerie')}}">Maroquinerie</a>
+                                                </li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/forge')}}">Fer
+                                                        Forgé</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/poterie')}}">Poterie
+                                                        et pierre</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/tapis')}}">Tapis</a>
+                                                </li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/article_chaussants')}}">Articles
+                                                        chaussants</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/bijouterie')}}">Bijouterie</a>
+                                                </li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/dinanderie')}}">Dinanderie</a>
+                                                </li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/vannerie')}}">Vannerie</a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li class="nav-item">
@@ -98,34 +120,52 @@
                                             <a class="nav-link" href="#contact">Contact-Nous</a>
                                         </li>
                                     </ul>
+                                    <?php
+                                           if (session()->has('client')) {
+                                               echo "<div class=\"logout btn\">
+                                               {{session('client')}}
+                                               <button type=\"button\" class=\"btn deconnecter\" aria-haspopup=\"true\"
+                                                   aria-expanded=\"false\"><a
+                                                       href=\"{{asset('http://127.0.0.1:8000/deconnect')}}\">Deconnecter</a>
+       
+                                               </button>
+                                           </div>";
+                                           }
+                                           else {
+                                               echo " <div class=\"login\">
+                                               <div class=\"btn-group \">
+                                                   <button type=\"button\" class=\"btn sign_btn dropdown-toggle\"
+                                                       data-toggle=\"dropdown\" aria-haspopup=\"true\"
+                                                       aria-expanded=\"false\"><a>Connecter</a>
+       
+                                                   </button>
+                                                   <div class=\"dropdown-menu\">
+                                                       <a class=\"dropdown-item\"
+                                                           href=\"{{asset('http://127.0.0.1:8000/admin/login')}}\">Artisan</a>
+                                                       <a class=\"dropdown-item\"
+                                                           href=\"{{asset('http://127.0.0.1:8000/login_client')}}\">Client</a>
+                                                   </div>
+                                               </div>
+       
+                                               <div class=\"btn-group\">
+                                                   <button type=\"button\" class=\"btn sign_btn dropdown-toggle\"
+                                                       data-toggle=\"dropdown\" aria-haspopup=\"true\"
+                                                       aria-expanded=\"false\"><a>inScrire</a>
+       
+                                                   </button>
+                                                   <div class=\"dropdown-menu\">
+                                                       <a class=\"dropdown-item\"
+                                                           href=\"{{asset('http://127.0.0.1:8000/inscrire_artisan')}}\">Artisan</a>
+                                                       <a class=\"dropdown-item\"
+                                                           href=\"{{asset('http://127.0.0.1:8000/inscrire_client')}}\">Client</a>
+                                                   </div>
+                                               </div>
+                                           </div>";
 
-                                    <div class="btn-group">
-                                        <button type="button" class="btn sign_btn dropdown-toggle"
-                                            data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false"><a>Connecter</a>
-
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item"
-                                                href="{{asset('http://127.0.0.1:8000/admin/login')}}">Artisan</a>
-                                            <a class="dropdown-item"
-                                                href="{{asset('http://127.0.0.1:8000/login_client')}}">Client</a>
-                                        </div>
-                                    </div>
-
-                                    <div class="btn-group">
-                                        <button type="button" class="btn sign_btn dropdown-toggle"
-                                            data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false"><a>inScrire</a>
-
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item"
-                                                href="{{asset('http://127.0.0.1:8000/inscrire_artisan')}}">Artisan</a>
-                                            <a class="dropdown-item"
-                                                href="{{asset('http://127.0.0.1:8000/inscrire_client')}}">Client</a>
-                                        </div>
-                                    </div>
+                                           }
+                                    ?>
+                                   
+                                    
                                 </div>
                             </nav>
                         </div>
@@ -133,6 +173,7 @@
                 </div>
             </div>
         </div>
+
     </header>
     <!-- end header inner -->
     <!-- end header -->
@@ -202,13 +243,13 @@
                                 <span></span>
                                 <p> Il regroupe de nombreux métiers étant donné que les artisans confectionnent aussi
                                     bien des vêtements typiques (djellabas, caftans…)... </p>
-                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/vetement')}}">Lire la suite <i
-                                        class=" fa fa-arrow-right" aria-hidden="true"></i></a>
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/vetement')}}">Lire la
+                                    suite <i class=" fa fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="metier_img">
-                                <figure><img src="images/about_img.png" alt="#" /></figure>
+                                <figure><img src="images/metier/vetement_icon.jpg" alt="#" /></figure>
                             </div>
                         </div>
                     </div>
@@ -222,13 +263,13 @@
                                 <span></span>
                                 <p>La principale matière première de cet artisanat est le bois. Cependant, il existe
                                     différents types de bois : Acajou, Chêne, Cèdre, Acacia, buis, Bois rouge... </p>
-                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/bois')}}">Lire la suite <i class="fa fa-arrow-right"
-                                        aria-hidden="true"></i></a>
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/bois')}}">Lire la suite
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="metier_img">
-                                <figure><img src="images/metier/menouisi.jpg" alt="#" /></figure>
+                                <figure><img src="images/metier/Bois_icon.jpg" alt="#" /></figure>
                             </div>
                         </div>
                     </div>
@@ -243,8 +284,8 @@
                                 <span></span>
                                 <p>Longtemps laissés de côté à l'ère du béton et du «vite fait», les artisans du
                                     bâtiment semblent enfin sortir de l'ombre... </p>
-                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/batiment')}}">Lire la suite <i class="fa fa-arrow-right"
-                                        aria-hidden="true"></i></a>
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/batiment')}}">Lire la
+                                    suite <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
@@ -264,13 +305,13 @@
                                 <p>Le maroquinier travaille le cuir et les matériaux souples pour la fabrication de
                                     sacs, gants, ceintures, portefeuilles...
                                 </p>
-                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/maroquinerie')}}">Lire la suite <i class="fa fa-arrow-right"
-                                        aria-hidden="true"></i></a>
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/maroquinerie')}}">Lire
+                                    la suite <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="metier_img">
-                                <figure><img src="images/about_img.png" alt="#" /></figure>
+                                <figure><img src="images/metier/Maroquinerie_icon.jpg" alt="#" /></figure>
                             </div>
                         </div>
                     </div>
@@ -285,13 +326,13 @@
                                 <span></span>
                                 <p>Dans l'artisanat marocain, le fer forgé tient un place très importante. Devenu une
                                     des matières premières les plus utilisés dans ces arts... </p>
-                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/forge')}}">Lire la suite <i class="fa fa-arrow-right"
-                                        aria-hidden="true"></i></a>
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/forge')}}">Lire la
+                                    suite <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-3">
                             <div class="metier_img">
-                                <figure><img src="images/metier/forge2.jpg" alt="#" /></figure>
+                                <figure><img src="images/metier/ferforge_icon.jpg" alt="#" /></figure>
                             </div>
                         </div>
                     </div>
@@ -306,13 +347,13 @@
                                 <p>La poterie est le premier artisanat de l'histoire de l'humanité. Au Maroc, cet
                                     artisanat mélange l'héritage berbère aux motifs d'inspiration arabo-andalouse...
                                 </p>
-                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/poterie')}}">Lire la suite <i class="fa fa-arrow-right"
-                                        aria-hidden="true"></i></a>
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/poterie')}}">Lire la
+                                    suite <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-3">
                             <div class="metier_img">
-                                <figure><img src="images/about_img.png" alt="#" /></figure>
+                                <figure><img src="images/metier/Poterieetpierre_icon.jpg" alt="#" /></figure>
                             </div>
                         </div>
                     </div>
@@ -328,13 +369,13 @@
                                 <p>Le tapis traditionnel est un moyen d'expression artistique, la transmission d'un
                                     savoir ancestral. Il est
                                     plutôt de tradition Berbère et très présent dans le sud marocain... </p>
-                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/Tapis')}}">Lire la suite <i class="fa fa-arrow-right"
-                                        aria-hidden="true"></i></a>
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/Tapis')}}">Lire la
+                                    suite <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-3">
                             <div class="metier_img">
-                                <figure><img src="images/about_img.png" alt="#" /></figure>
+                                <figure><img src="images/metier/Tapis_icon.jpg" alt="#" /></figure>
                             </div>
                         </div>
                     </div>
@@ -349,8 +390,8 @@
                                 <p>le couverture marocaine est un symbole intemporel de culture, de sagesse et de
                                     tradition. Fabriquées avec passion, patience et amour par les femmes des tribus du
                                     Maroc... </p>
-                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/couverture')}}">Lire la suite <i class="fa fa-arrow-right"
-                                        aria-hidden="true"></i></a>
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/couverture')}}">Lire la
+                                    suite <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-3">
@@ -370,8 +411,8 @@
                                 <span></span>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                     ullamco laboris nisi ut aliquip ex ea commodo... </p>
-                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/chaussants')}}">Lire la suite <i class="fa fa-arrow-right"
-                                        aria-hidden="true"></i></a>
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/chaussants')}}">Lire la
+                                    suite <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-3">
@@ -391,13 +432,13 @@
                                 <p>Le bijoutier réalise des bijoux en métal (précieux ou non), terre, verre, textile,
                                     bois… en petite série ou en pièce unique. Il travaille la matière selon des
                                     techniques diverses, adaptées au matériau utilisé... </p>
-                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/bijouterie')}}">Lire la suite <i class="fa fa-arrow-right"
-                                        aria-hidden="true"></i></a>
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/bijouterie')}}">Lire la
+                                    suite <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-3">
                             <div class="metier_img">
-                                <figure><img src="images/metier/bijoue3.jpg" alt="#" /></figure>
+                                <figure><img src="images/metier/Bijouterie_icon.jpg" alt="#" /></figure>
                             </div>
                         </div>
                     </div>
@@ -412,13 +453,13 @@
                                 <span></span>
                                 <p>Artisan d'art, le dinandier fabrique des objets utilitaires et décoratifs par
                                     martelage à partir d'une feuille de cuivre, d'étain ou de fer-blanc .... </p>
-                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/dinanderie')}}">Lire la suite <i class="fa fa-arrow-right"
-                                        aria-hidden="true"></i></a>
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/dinanderie')}}">Lire la
+                                    suite <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-3">
                             <div class="metier_img">
-                                <figure><img src="images/about_img.png" alt="#" /></figure>
+                                <figure><img src="images/metier/Dinanderie_icon.jpg" alt="#" /></figure>
                             </div>
                         </div>
                     </div>
@@ -433,13 +474,13 @@
                                 <p>La vannerie désigne : l'art de tresser des fibres végétales (les matériaux) pour
                                     réaliser des objets très variés (les corbeilles, paniers, mannes et cabas, les
                                     chapeaux, les nattes, les vans,...).</p>
-                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/vannerie')}}">Lire la suite <i class="fa fa-arrow-right"
-                                        aria-hidden="true"></i></a>
+                                <a class="read_more" href="{{asset('http://127.0.0.1:8000/metier/vannerie')}}">Lire la
+                                    suite <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-3">
                             <div class="metier_img">
-                                <figure><img src="images/about_img.png" alt="#" /></figure>
+                                <figure><img src="images/metier/Vannerie_icon.jpg" alt="#" /></figure>
                             </div>
                         </div>
                     </div>
@@ -491,12 +532,12 @@
                 <div class="col-md-12">
 
                     <div class="titlepage">
-                        <h2>Vous-avez des question ?<br> n'hésitez  pas de Contactez-nous </h2>
+                        <h2>Vous-avez des question ?<br> n'hésitez pas de Contactez-nous </h2>
                     </div>
                 </div>
                 <div class="col-md-6 offset-md-3">
                     <form id="request" class="main_form" action="ajouter_note" method="POST">
-                    @csrf
+                        @csrf
                         <div class="row">
                             <div class="col-md-6">
                                 <input class="contactus" placeholder="Nom et Prenom" type="texte" name="user">
@@ -509,16 +550,16 @@
                             <div class="col-md-12">
                                 <input class="contactus" placeholder="objet" type="textarea" name="msg">
                             </div>
- 
-                            </div>
-                            <div class="col-sm-12">
-                                <button class="send_btn">Send</button>
-                            </div>
+
                         </div>
-                    </form>
+                        <div class="col-sm-12">
+                            <button class="send_btn">Send</button>
+                        </div>
                 </div>
+                </form>
             </div>
         </div>
+    </div>
     </div>
     <!-- end contact -->
 

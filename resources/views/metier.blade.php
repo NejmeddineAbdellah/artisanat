@@ -189,14 +189,14 @@
             <!-- --------------un boucle pour recuperer et afficher les artisan---------------- -->
             @foreach ($myArtisan as $art)
             <div class="col-lg-4 col-md-6 col-sm-12 align-items-stretch card">
-                <img class="card-img-top" src="images/cross_img.png" alt="Card image cap">
+                <img class="card-img-top" src="http://127.0.0.1:8000/images/cross_img.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">{{ $art->nom }} {{ $art->prenom }}</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                         additional
                         content. This card has even longer content than the first to show that equal height action.</p>
-                    <a class="read_more">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                </div>
+                    <a class="read_more">commander <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                </div>  
             </div>
             @endforeach
             <!-- ----------------------------------- -->
