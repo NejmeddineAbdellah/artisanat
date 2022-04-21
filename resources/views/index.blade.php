@@ -124,7 +124,7 @@
                                            if (session()->has('client')) {
                                                ?>
                                                <div class="logout btn">
-                                               {{session('client')}}
+                                               {{session('client')['nom']}}
                                                <button type="button" class="btn deconnecter" aria-haspopup="true"
                                                    aria-expanded="false"><a
                                                        href=" {{asset('http://127.0.0.1:8000/deconnect')}}">Deconnecter</a>
@@ -552,7 +552,7 @@
 
                         </div>
                         <div class="col-sm-12">
-                            <button class="send_btn">Send</button>
+                            <button class="send_btn">Envoyer</button>
                         </div>
                 </div>
                 </form>
@@ -564,35 +564,8 @@
 
 
     <!-- footer -->
-    <footer class="footer">
-        <div class="waves">
-            <div class="wave" id="wave1"></div>
-            <div class="wave" id="wave2"></div>
-            <div class="wave" id="wave3"></div>
-            <div class="wave" id="wave4"></div>
-        </div>
-        <ul class="social-icon">
-            <li class="social-icon_item"><a class="social-icon_link" href="#">
-                    <ion-icon name="logo-facebook"></ion-icon>
-                </a></li>
-            <li class="social-icon_item"><a class="social-icon_link" href="#">
-                    <ion-icon name="logo-twitter"></ion-icon>
-                </a></li>
-            <li class="social-icon_item"><a class="social-icon_link" href="#">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                </a></li>
-            <li class="social-icon_item"><a class="social-icon_link" href="#">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                </a></li>
-        </ul>
-        <ul class="menu">
-            <li class="menu_item"><a class="menu_link" href="#">Accueil</a></li>
-            <li class="menu_item "><a class="menu_link" href="#apropos">A propos</a></li>
-            <li class="menu_item"><a class="menu_link" href="#contact">Contact-nous</a></li>
-
-        </ul>
-        <p>&copy;EL MAALAM | All Rights Reserved</p>
-    </footer>
+    @yield("content")
+ 
     <!-- end footer -->
 
 

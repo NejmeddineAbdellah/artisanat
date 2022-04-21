@@ -4,9 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Clients;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\DB;
 
 
 class ClientController extends Controller
@@ -38,8 +36,8 @@ class ClientController extends Controller
 
 
                 if (Hash::check($request->input('password'),$cl[0]->password)) {
-                   $request->session()->put('client',$cl[0]->nom);
-                   
+                    $request->session()->put('client',['id'=>$cl[0]->id,'nom'=>$cl[0]->nom]);
+                    
                     return redirect('/');
                 }
                 else {

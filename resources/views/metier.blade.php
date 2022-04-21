@@ -105,7 +105,7 @@
                                            if (session()->has('client')) {
                                                ?>
                                                <div class="logout btn">
-                                               {{session('client')}}
+                                               {{session('client')['nom']}}
                                                <button type="button" class="btn deconnecter" aria-haspopup="true"
                                                    aria-expanded="false"><a
                                                        href=" {{asset('http://127.0.0.1:8000/deconnect')}}">Deconnecter</a>
@@ -211,9 +211,9 @@
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                         additional
                         content. This card has even longer content than the first to show that equal height action.</p>
-                    <a class="read_more">commander <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                    <a class="read_more" href="{{ URL('/commande',['id'=>$art->id])}}"> commander <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                 </div>  
-            </div>
+            </div> 
             @endforeach
             <!-- ----------------------------------- -->
         </div>

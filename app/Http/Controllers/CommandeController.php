@@ -12,9 +12,11 @@ class CommandeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $req)
     {
-        //
+         $id=$req->id;
+       
+       return view('commande',['id_art'=>$id]);
     }
 
     /**
@@ -24,7 +26,7 @@ class CommandeController extends Controller
      */
     public function create()
     {
-        //
+     //   
     }
 
     /**
@@ -35,7 +37,28 @@ class CommandeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $id_art = $request->input('id_art');
+        $id_cl = $request->input('id_cl');
+        $titre = $request->input('titre');
+        $desc = $request->input('description');
+        $date = $request->input('date');
+        $img = $request->input('image');
+        
+        
+        $cmd = new \App\Models\Commandes();
+
+        $cmd->id_client = $id_cl;
+        $cmd->id_artisan = $id_art;
+        $cmd->titre_commande = $titre;
+        $cmd->description_commande = $desc;
+        $cmd->image = $img;
+        $cmd->date_commande = $date;
+        
+        
+        $cmd->save();
+        
+        return redirect('/');
+       
     }
 
     /**

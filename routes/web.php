@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\MetierController;
 use App\Http\Controllers\ArtisanController;
+use App\Http\Controllers\CommandeController;
 use App\Http\Controllers\NotesController;
 
 /*
@@ -22,12 +23,17 @@ Route::get('/', [MainController::class, 'accueil']);
 Route::get('/metier/{metier}', [MetierController::class, 'show']);
 Route::get('login_client', [ClientController::class, 'clientAuthentifier']);
 Route::get('/inscrire_client', [ClientController::class, 'index']);
-Route::get('/inscrire_artisan', [ArtisanController::class, 'index']);
 Route::post('connect', [ClientController::class, 'clientlogin']);
 Route::get('/deconnect', [ClientController::class, 'clientlogout']);
 Route::post('ajouter_client', [ClientController::class, 'store']);
+
+Route::get('/inscrire_artisan', [ArtisanController::class, 'index']);
 Route::post('ajouter_artisan', [ArtisanController::class, 'store']);
+
 Route::post('ajouter_note', [NotesController::class, 'store']);
+
+Route::get('/commande/{id}', [CommandeController::class, 'index']);
+Route::post('confirmer', [CommandeController::class, 'store']);
 
 
 
