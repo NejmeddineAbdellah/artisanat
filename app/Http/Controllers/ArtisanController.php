@@ -50,7 +50,7 @@ class ArtisanController extends Controller
         $artisan->nom=$nom;
         $artisan->prenom=$prenom;
         $artisan->email=$email;
-        $artisan->telephone=$telephone;
+        $artisan->phone=$telephone;
         $artisan->avatar=$avatare;
         $artisan->metier=$metier;
         $artisan->role_id='4';

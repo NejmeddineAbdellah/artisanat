@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="http://127.0.0.1:8000/css/style.css">
     <!-- Responsive-->
     <link rel="stylesheet" href="http://127.0.0.1:8000/css/responsive.css">
+    <!-- footer css-->
+    <link rel="stylesheet" href="http://127.0.0.1:8000/css/footercss.css">
     <!-- fevicon -->
     <link rel="icon" href="images/fevicon.png" type="image/gif" />
     <!-- Scrollbar Custom CSS -->
@@ -120,6 +122,7 @@
                                             <a class="nav-link" href="#contact">Contact-Nous</a>
                                         </li>
                                     </ul>
+                                    <!-- connect client et demarage session  -->
                                     <?php
                                            if (session()->has('client')) {
                                                ?>
@@ -514,7 +517,7 @@
                         <figure><img src="images/logo.jpeg" alt="#" /></figure>
                     </div>
                 </div>
-                <a class="read_more">Lire la Suite ... <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                
             </div>
         </div>
     </div>
@@ -564,7 +567,36 @@
 
 
     <!-- footer -->
-    @yield("content")
+    <footer class="footer">
+    <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+        <li class="social-iconitem"><a class="social-iconlink" href="#">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a></li>
+        <li class="social-iconitem"><a class="social-iconlink" href="#">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a></li>
+        <li class="social-iconitem"><a class="social-iconlink" href="#">
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </a></li>
+        <li class="social-iconitem"><a class="social-iconlink" href="#">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+    </ul>
+    <ul class="menu">
+        <li class="menuitem"><a class="menulink" href="#">Accueil</a></li>
+        <li class="menuitem "><a class="menulink" href="#metier">Métier</a></li>
+        <li class="menuitem"><a class="menulink" href="#apropos">A Propos</a></li>
+        <li class="menuitem"><a class="menulink" href="#Contact">Contactez-Nous</a></li>
+
+    </ul>
+    <p>&copy; EL MAALAM | Tous Les Droits Sont Réservés </p>
+</footer>
  
     <!-- end footer -->
 
