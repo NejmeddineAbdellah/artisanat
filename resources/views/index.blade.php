@@ -122,52 +122,52 @@
                                             <a class="nav-link" href="#contact">Contact-Nous</a>
                                         </li>
                                     </ul>
-                                    <!-- connect client et demarage session  -->
+                                    <!-- connect client et demarrage de session  -->
                                     <?php
                                            if (session()->has('client')) {
                                                ?>
-                                               <div class="logout btn">
-                                               {{session('client')['nom']}}
-                                               <button type="button" class="btn deconnecter" aria-haspopup="true"
-                                                   aria-expanded="false"><a
-                                                       href=" {{asset('http://127.0.0.1:8000/deconnect')}}">Deconnecter</a>
+                                    <div class="logout btn">
+                                        {{session('client')['nom']}}
+                                        <button type="button" class="btn deconnecter" aria-haspopup="true"
+                                            aria-expanded="false"><a
+                                                href=" {{asset('http://127.0.0.1:8000/deconnect')}}">Deconnecter</a>
 
-                                               </button>
-                                           </div>
-                                           <?php } else {?>
-                                               <div class="login">
-                                               <div class="btn-group ">
-                                                   <button type="button" class="btn sign_btn dropdown-toggle"
-                                                       data-toggle="dropdown" aria-haspopup="true"
-                                                       aria-expanded="false"><a>Connecter</a>
-       
-                                                   </button>
-                                                   <div class="dropdown-menu">
-                                                       <a class="dropdown-item"
-                                                           href="{{asset('http://127.0.0.1:8000/admin/login')}}">Artisan</a>
-                                                       <a class="dropdown-item"
-                                                           href="{{asset('http://127.0.0.1:8000/login_client')}}">Client</a>
-                                                   </div>
-                                               </div>
-       
-                                               <div class="btn-group">
-                                                   <button type="button" class="btn sign_btn dropdown-toggle"
-                                                       data-toggle="dropdown" aria-haspopup="true"
-                                                       aria-expanded="false"><a>inScrire</a>
-       
-                                                   </button>
-                                                   <div class="dropdown-menu">
-                                                       <a class="dropdown-item"
-                                                           href="{{asset('http://127.0.0.1:8000/inscrire_artisan')}}">Artisan</a>
-                                                       <a class="dropdown-item"
-                                                           href="{{asset('http://127.0.0.1:8000/inscrire_client')}}">Client</a>
-                                                   </div>
-                                               </div>
-                                           </div>
+                                        </button>
+                                    </div>
+                                    <?php } else {?>
+                                    <div class="login">
+                                        <div class="btn-group ">
+                                            <button type="button" class="btn sign_btn dropdown-toggle"
+                                                data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false"><a>Connecter</a>
 
-                                           <?php } ?>
-                                    
-                                    
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item"
+                                                    href="{{asset('http://127.0.0.1:8000/admin/login')}}">Artisan</a>
+                                                <a class="dropdown-item"
+                                                    href="{{asset('http://127.0.0.1:8000/login_client')}}">Client</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-group">
+                                            <button type="button" class="btn sign_btn dropdown-toggle"
+                                                data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false"><a>inScrire</a>
+
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item"
+                                                    href="{{asset('http://127.0.0.1:8000/inscrire_artisan')}}">Artisan</a>
+                                                <a class="dropdown-item"
+                                                    href="{{asset('http://127.0.0.1:8000/inscrire_client')}}">Client</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <?php } ?>
+
+
                                 </div>
                             </nav>
                         </div>
@@ -517,7 +517,7 @@
                         <figure><img src="images/logo.jpeg" alt="#" /></figure>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -568,36 +568,36 @@
 
     <!-- footer -->
     <footer class="footer">
-    <div class="waves">
-        <div class="wave" id="wave1"></div>
-        <div class="wave" id="wave2"></div>
-        <div class="wave" id="wave3"></div>
-        <div class="wave" id="wave4"></div>
-    </div>
-    <ul class="social-icon">
-        <li class="social-iconitem"><a class="social-iconlink" href="#">
-                <ion-icon name="logo-facebook"></ion-icon>
-            </a></li>
-        <li class="social-iconitem"><a class="social-iconlink" href="#">
-                <ion-icon name="logo-twitter"></ion-icon>
-            </a></li>
-        <li class="social-iconitem"><a class="social-iconlink" href="#">
-                <ion-icon name="logo-linkedin"></ion-icon>
-            </a></li>
-        <li class="social-iconitem"><a class="social-iconlink" href="#">
-                <ion-icon name="logo-instagram"></ion-icon>
-            </a></li>
-    </ul>
-    <ul class="menu">
-        <li class="menuitem"><a class="menulink" href="#">Accueil</a></li>
-        <li class="menuitem "><a class="menulink" href="#metier">Métier</a></li>
-        <li class="menuitem"><a class="menulink" href="#apropos">A Propos</a></li>
-        <li class="menuitem"><a class="menulink" href="#Contact">Contactez-Nous</a></li>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+            <li class="social-iconitem"><a class="social-iconlink" href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+            <li class="social-iconitem"><a class="social-iconlink" href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+            <li class="social-iconitem"><a class="social-iconlink" href="#">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li class="social-iconitem"><a class="social-iconlink" href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+        </ul>
+        <ul class="menu">
+            <li class="menuitem"><a class="menulink" href="#">Accueil</a></li>
+            <li class="menuitem "><a class="menulink" href="#metier">Métier</a></li>
+            <li class="menuitem"><a class="menulink" href="#apropos">A Propos</a></li>
+            <li class="menuitem"><a class="menulink" href="#Contact">Contactez-Nous</a></li>
 
-    </ul>
-    <p>&copy; EL MAALAM | Tous Les Droits Sont Réservés </p>
-</footer>
- 
+        </ul>
+        <p>&copy; EL MAALAM | Tous Les Droits Sont Réservés </p>
+    </footer>
+
     <!-- end footer -->
 
 

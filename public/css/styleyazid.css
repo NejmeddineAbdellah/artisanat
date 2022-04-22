@@ -131,7 +131,11 @@ p {
      line-height: 24px;
 }
 
-
+a {
+     color: #222222;
+     text-decoration: none;
+     outline: none !important;
+}
 
 a,
 .btn {
@@ -545,7 +549,7 @@ button {
 .read_more {
      font-size: 14px;
      background-color: transparent;
-     color: #7a7a7a;
+     color: #EDC16B;
      padding: 8px 0px;
      width: 100%;
      max-width:30%;
@@ -564,7 +568,7 @@ button {
      background: #005B4C;
      cursor: pointer;
      border: #005B4C solid 3px;
-     color: #005B4C !important;
+     color: #ffffff !important;
      transition: ease-in all 0.5s;
 }
 
@@ -781,14 +785,14 @@ button {
 
 .apropos .read_more {
      width: 15%;
-     border: #fff solid 3px;
      color: #fff;
-     background-color: #fff;
+     background-color: #005B4C;
 }
+
 .apropos .read_more:hover{
      width: 15%;
-     border: #005B4C solid 3px;
-     background: #005B4C;
+     border: #EDC16B solid 3px;
+     background-color: #EDC16B;
      cursor: pointer;
      color: #fff !important;
      transition: ease-in all 0.5s;
@@ -937,41 +941,40 @@ button {
 
 /** footer **/
 
-.footer {
-     margin-bottom: 0px;
-     background-color: #EDC16B;
-     text-align: center;
-     padding-top:24px;
-     font-size:15px;
-     margin-bottom:0;
-     text-align: left;
-     position: relative;
-     width: 100%;
-     background: #EDC16B;
-     min-height: 100px;
-     padding: 20px 50px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-direction: column;
-}
-.footer a{
-     margin: 15px;
-
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer {
+margin-bottom: 0px;
+background-color: #EDC16B;
+text-align: center;
+padding-top:24px;
+padding: 20px 50px;
+font-size:15px;
+position: relative;
+width: 100%;
+background: #EDC16B;
+min-height: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
 
 .social-icon,
 .menu {
-
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px 0;
   flex-wrap: wrap;
-  
 }
 
 .social-icon__item,
@@ -988,8 +991,7 @@ button {
 }
 .social-icon__link:hover {
   transform: translateY(-10px);
-  color: #fff;
-  background-color: #fff;
+  color: #005B4C;
 }
 
 .menu__link {
@@ -1005,7 +1007,7 @@ button {
 
 .menu__link:hover {
   opacity: 1;
-  color: #fff;
+  color: #005B4C;
 }
 
 .footer p {
@@ -1071,6 +1073,7 @@ button {
     background-positon-x: 0px;
   }
 }
+
 .enter {
      border: inherit;
      width: 71%;
@@ -1098,7 +1101,7 @@ button {
 }
 
 .submit:hover {
-     background-color: #fff;
+     background-color: #00aeef;
      transition: ease-in all 0.5s;
      color: #fff;
 }

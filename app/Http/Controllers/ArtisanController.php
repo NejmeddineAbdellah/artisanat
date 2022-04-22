@@ -11,6 +11,8 @@ class ArtisanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     //----------function permet d'afficher la page inscrire_artisan
     public function index()
     {
         return view("inscrire_artisan");
@@ -33,6 +35,9 @@ class ArtisanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+
+     //------------function permet de sauvgarder le compte artisan dans la base de donnee
     public function store(Request $request)
     {
         $nom = $request->nom;
@@ -59,7 +64,6 @@ class ArtisanController extends Controller
         $artisan->save();
         
         return redirect('/');
-       
 
     }
 

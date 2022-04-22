@@ -28,12 +28,12 @@ class ClientController extends Controller
         return view("login_client");
     }
 
+
+    //-----------function qui verifier l'authetification du client-------
+
     public function clientlogin(Request $request)
     {   
-     
-
        $cl = Clients::where('email',$request->input('email'))->get();
-
 
                 if (Hash::check($request->input('password'),$cl[0]->password)) {
                     $request->session()->put('client',['id'=>$cl[0]->id,'nom'=>$cl[0]->nom]);
@@ -46,6 +46,8 @@ class ClientController extends Controller
                 
     }
 
+    //-----------function qui permet de deconnecrter un client et detruire la session-------
+    
     public function clientlogout(Request $request)  
     {
         if (session()->has('client')) {
@@ -83,7 +85,7 @@ class ClientController extends Controller
         $email = $request->email;
         $telephone = $request->telephone;
         $password = $request->pass;
-        
+
         $client = new \App\Models\Clients();
         
         $client->nom=$nom;
@@ -93,7 +95,6 @@ class ClientController extends Controller
         $client->password=Hash::make($password);
         
         $client->save();
-        
         return redirect('/');
        
 

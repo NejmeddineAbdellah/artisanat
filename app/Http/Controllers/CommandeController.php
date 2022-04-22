@@ -12,6 +12,9 @@ class CommandeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    //-----------function qui permet passer id du client par l'URL -------
+
     public function index(Request $req)
     {
          $id=$req->id;
@@ -35,6 +38,10 @@ class CommandeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+
+    //-----------function qui permet ajouter une commande dans la base de donnee-------
+
     public function store(Request $request)
     {
         $id_art = $request->input('id_art');
@@ -43,7 +50,6 @@ class CommandeController extends Controller
         $desc = $request->input('description');
         $date = $request->input('date');
         $img = $request->input('image');
-        
         
         $cmd = new \App\Models\Commandes();
 

@@ -33,6 +33,8 @@ class NotesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    //-----------function qui permet d'ajouter la note ou bien question dans la base de donnee -------
     public function store(Request $request)
     {
         $user = $request->user;
