@@ -131,7 +131,11 @@
             </div>
         </div>
     </header>
-
+    @if(session('success'))
+                            <div class="alert alert-danger">
+                            {{session('success')}}
+                            </div>
+                        @endif
 
     <section class="ftco-section">
         <div class="container">
@@ -167,7 +171,7 @@
                                     </label>
                                 </div>
                                 <div class="w-50 text-md-right">
-                                    <a href="http://127.0.0.1:8000/inscription_cl" style="color: #fff"> <span>Inscrire
+                                    <a href="{{asset('http://127.0.0.1:8000/inscrire_client')}}" style="color: #fff"> <span>Inscrire
                                             ?</span> </a>
                                 </div>
                             </div>

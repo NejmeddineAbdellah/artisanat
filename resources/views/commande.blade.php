@@ -29,6 +29,8 @@
                         <div class="form-header">
                             <h1>Crée votre Commande</h1>
                         </div>
+
+                   
                         <form action="/confirmer" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
@@ -36,8 +38,19 @@
                                     placeholder="Titre de votre commande">
                                 <span class="form-label">Titre</span>
                             </div>
-                            <input type="hidden" value="{{$id_art}}" name="id_art">
+                            <input type="hidden" value="{{ $Art[0]->id }}" name="id_art">
                             <input type="hidden" value="  {{session('client')['id']}}" name="id_cl">
+                            
+                            <div class="form-group">
+                                <textarea class="form-control" type="text_area" value="{{ $Art[0]->nom }}" name="nom_art"
+                                    placeholder="" cols="30" rows="10 ">{{ $Art[0]->nom }}</textarea>
+                                <span class="form-label">Nom d'artisan</span>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" type="text_area" value="{{session('client')['nom']}}" name="nom_client"
+                                    placeholder="" cols="30" rows="10">{{session('client')['nom']}}</textarea>
+                                <span class="form-label">Nom Client</span>
+                            </div>
                             <div class="form-group">
                                 <textarea class="form-control" type="text_area" name="description"
                                     placeholder="Description de votre commande" cols="30" rows="10"></textarea>

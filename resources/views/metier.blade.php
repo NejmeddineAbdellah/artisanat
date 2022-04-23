@@ -55,8 +55,8 @@
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="{{asset('http://127.0.0.1:8000')}}"><img src="http://127.0.0.1:8000/images/logo.png"
-                                            alt="logo_artisana" /></a>
+                                    <a href="{{asset('http://127.0.0.1:8000')}}"><img
+                                            src="http://127.0.0.1:8000/images/logo.png" alt="logo_artisana" /></a>
                                 </div>
                             </div>
                         </div>
@@ -80,70 +80,94 @@
                                                 Metier
                                             </a>
                                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/vetements')}}">Vêtements</a></li>
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/bois')}}">Bois</a></li>
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/batiment')}}">Bâtiment traditionnel</a></li>
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/maroquinerie')}}">Maroquinerie</a></li>
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/forge')}}">Fer Forgé</a></li>
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/poterie')}}">Poterie et pierre</a></li>
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/tapis')}}">Tapis</a></li>
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/article_chaussants')}}">Articles chaussants</a></li>
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/bijouterie')}}">Bijouterie</a></li>
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/dinanderie')}}">Dinanderie</a></li>
-                                                <li><a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/metier/vannerie')}}">Vannerie</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/vetements')}}">Vêtements</a>
+                                                </li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/bois')}}">Bois</a>
+                                                </li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/batiment')}}">Bâtiment
+                                                        traditionnel</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/maroquinerie')}}">Maroquinerie</a>
+                                                </li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/forge')}}">Fer
+                                                        Forgé</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/poterie')}}">Poterie
+                                                        et pierre</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/tapis')}}">Tapis</a>
+                                                </li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/article_chaussants')}}">Articles
+                                                        chaussants</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/bijouterie')}}">Bijouterie</a>
+                                                </li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/dinanderie')}}">Dinanderie</a>
+                                                </li>
+                                                <li><a class="dropdown-item"
+                                                        href="{{asset('http://127.0.0.1:8000/metier/vannerie')}}">Vannerie</a>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000/#apropos')}}">A propos</a>
+                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000/#apropos')}}">A
+                                                propos</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{asset('http://127.0.0.1:8000/#contact')}}">Contact-Nous</a>
+                                            <a class="nav-link"
+                                                href="{{asset('http://127.0.0.1:8000/#contact')}}">Contact-Nous</a>
                                         </li>
                                     </ul>
 
                                     <?php
                                            if (session()->has('client')) {
                                                ?>
-                                               <div class="logout btn">
-                                               {{session('client')['nom']}}
-                                               <button type="button" class="btn deconnecter" aria-haspopup="true"
-                                                   aria-expanded="false"><a
-                                                       href=" {{asset('http://127.0.0.1:8000/deconnect')}}">Deconnecter</a>
+                                    <div class="logout btn">
+                                        {{session('client')['nom']}}
+                                        <button type="button" class="btn deconnecter" aria-haspopup="true"
+                                            aria-expanded="false"><a
+                                                href=" {{asset('http://127.0.0.1:8000/deconnect')}}">Deconnecter</a>
 
-                                               </button>
-                                           </div>
-                                           <?php } else {?>
-                                               <div class="login">
-                                               <div class="btn-group ">
-                                                   <button type="button" class="btn sign_btn dropdown-toggle"
-                                                       data-toggle="dropdown" aria-haspopup="true"
-                                                       aria-expanded="false"><a>Connecter</a>
-       
-                                                   </button>
-                                                   <div class="dropdown-menu">
-                                                       <a class="dropdown-item"
-                                                           href="{{asset('http://127.0.0.1:8000/admin/login')}}">Artisan</a>
-                                                       <a class="dropdown-item"
-                                                           href="{{asset('http://127.0.0.1:8000/login_client')}}">Client</a>
-                                                   </div>
-                                               </div>
-       
-                                               <div class="btn-group">
-                                                   <button type="button" class="btn sign_btn dropdown-toggle"
-                                                       data-toggle="dropdown" aria-haspopup="true"
-                                                       aria-expanded="false"><a>inScrire</a>
-       
-                                                   </button>
-                                                   <div class="dropdown-menu">
-                                                       <a class="dropdown-item"
-                                                           href="{{asset('http://127.0.0.1:8000/inscrire_artisan')}}">Artisan</a>
-                                                       <a class="dropdown-item"
-                                                           href="{{asset('http://127.0.0.1:8000/inscrire_client')}}">Client</a>
-                                                   </div>
-                                               </div>
-                                           </div>
+                                        </button>
+                                    </div>
+                                    <?php } else {?>
+                                    <div class="login">
+                                        <div class="btn-group ">
+                                            <button type="button" class="btn sign_btn dropdown-toggle"
+                                                data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false"><a>Connecter</a>
 
-                                           <?php } ?>
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item"
+                                                    href="{{asset('http://127.0.0.1:8000/admin/login')}}">Artisan</a>
+                                                <a class="dropdown-item"
+                                                    href="{{asset('http://127.0.0.1:8000/login_client')}}">Client</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-group">
+                                            <button type="button" class="btn sign_btn dropdown-toggle"
+                                                data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false"><a>inScrire</a>
+
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item"
+                                                    href="{{asset('http://127.0.0.1:8000/inscrire_artisan')}}">Artisan</a>
+                                                <a class="dropdown-item"
+                                                    href="{{asset('http://127.0.0.1:8000/inscrire_client')}}">Client</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <?php } ?>
                                 </div>
                             </nav>
                         </div>
@@ -169,8 +193,7 @@
                 <img class="first-slide" src="http://127.0.0.1:8000/images/Slider/im1.jpg" alt="First slide">
                 <div class="container">
                     <div class="carousel-caption relative">
-                        <h1> <span>ART</span> number 1</h1>
-                        <a href="#contact">Contact Us</a>
+                        <a href="http://127.0.0.1:8000/#contact">Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -178,8 +201,32 @@
                 <img class="second-slide" src="http://127.0.0.1:8000/images/Slider/im2.jpg" alt="Second slide">
                 <div class="container">
                     <div class="carousel-caption relative">
-                        <h1> <span>ART</span> number 2</h1>
-                        <a href="#contact">Contact Us</a>
+                        <a href="http://127.0.0.1:8000/#contact">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="second-slide" src="http://127.0.0.1:8000/images/metier/bois_header.jpg" alt="Second slide">
+                <div class="container">
+                    <div class="carousel-caption relative">
+                        <a href="http://127.0.0.1:8000/#contact">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="second-slide" src="http://127.0.0.1:8000/images/metier/bijouterie_header.jpg"
+                    alt="Second slide">
+                <div class="container">
+                    <div class="carousel-caption relative">
+                        <a href="http://127.0.0.1:8000/#contact">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="second-slide" src="http://127.0.0.1:8000/images/metier/Tapis_header.jpg" alt="Second slide">
+                <div class="container">
+                    <div class="carousel-caption relative">
+                        <a href="http://127.0.0.1:8000/#contact">Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -192,17 +239,20 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
+
     </div>
     <!-- end banner -->
 
 
 
     <!-- Artisan -->
-    <div class="container">
+    <div class="container art_section">
         <br>
         <h1>Les Artisan de ce metier : </h1>
         <div class="row card_artisan d_flex">
+
             <!-- --------------un boucle pour recuperer et afficher les artisan---------------- -->
+
             @foreach ($myArtisan as $art)
             <div class="col-lg-4 col-md-6 col-sm-12 align-items-stretch card">
                 <img class="card-img-top" src="http://127.0.0.1:8000/images/cross_img.png" alt="Card image cap">
@@ -211,14 +261,31 @@
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                         additional
                         content. This card has even longer content than the first to show that equal height action.</p>
-                    <a class="read_more" href="{{ URL('/commande',['id'=>$art->id])}}"> commander <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                </div>  
-            </div> 
+
+                    @if(session()->has('client'))
+
+                    <a class="read_more" href="{{ URL('/commande',['id'=>$art->id])}}"> commander <i
+                            class="fa fa-arrow-right" aria-hidden="true"></i></a>
+
+                    @else
+
+                    <a class="read_more" href="/login_client"> commander <i class="fa fa-arrow-right"
+                            aria-hidden="true">
+
+                        </i>
+                    </a>
+                    @endif
+
+                    
+                </div>
+            </div>
             @endforeach
+
             <!-- ----------------------------------- -->
         </div>
     </div>
     <!-- end Artisan -->
+
 
 
     <!-- footer -->
@@ -245,22 +312,24 @@
         </ul>
         <ul class="menu">
             <li class="menu_item"><a class="menu_link" href="{{asset('http://127.0.0.1:8000')}}">Accueil</a></li>
-            <li class="menu_item "><a class="menu_link" href="{{asset('http://127.0.0.1:8000/#apropos')}}">A propos</a></li>
-            <li class="menu_item"><a class="menu_link" href="{{asset('http://127.0.0.1:8000/#contact')}}">Contact-nous</a></li>
+            <li class="menu_item "><a class="menu_link" href="{{asset('http://127.0.0.1:8000/#apropos')}}">A propos</a>
+            </li>
+            <li class="menu_item"><a class="menu_link"
+                    href="{{asset('http://127.0.0.1:8000/#contact')}}">Contact-nous</a></li>
         </ul>
         <p>&copy;EL MAALAM | All Rights Reserved</p>
     </footer>
- 
+
     <!-- end footer -->
 
     <!-- back to the top -->
     <div class="progress-bar" />
-        <button class="back-to-top hidden">
+    <button class="back-to-top hidden">
         <svg xmlns="http://www.w3.org/2000/svg" class="back-to-top-icon" fill="none" viewBox="0 0 24 24"
             stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
         </svg>
-        </button>
+    </button>
     <div />
     <!-- end back to the top -->
 

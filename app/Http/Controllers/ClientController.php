@@ -41,7 +41,8 @@ class ClientController extends Controller
                     return redirect('/');
                 }
                 else {
-                     echo "Error mot de pass incorrects !";
+                    return redirect('http://127.0.0.1:8000/login_client')->with('success','erreur mot de passe incorrect.
+                    !');
                 }    
                 
     }
@@ -79,7 +80,7 @@ class ClientController extends Controller
      //-----------function qui permet d'ajouter client a la base de donneé-------
     public function store(Request $request)
     {
-      
+     
         $nom = $request->nom;
         $prenom = $request->prenom;
         $email = $request->email;
@@ -95,7 +96,7 @@ class ClientController extends Controller
         $client->password=Hash::make($password);
         
         $client->save();
-        return redirect('/');
+        return redirect('/')->with('success','votre compte client à été crée avec succès');
        
 
     }

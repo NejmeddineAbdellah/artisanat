@@ -21,6 +21,7 @@ use App\Http\Controllers\NotesController;
 
 Route::get('/', [MainController::class, 'accueil']);
 Route::get('/metier/{metier}', [MetierController::class, 'show']);
+
 Route::get('login_client', [ClientController::class, 'clientAuthentifier']);
 Route::get('/inscrire_client', [ClientController::class, 'index']);
 Route::post('connect', [ClientController::class, 'clientlogin']);

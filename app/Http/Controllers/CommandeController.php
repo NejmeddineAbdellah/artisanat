@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Commandes;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CommandeController extends Controller
 {
@@ -15,11 +16,12 @@ class CommandeController extends Controller
 
     //-----------function qui permet passer id du client par l'URL -------
 
-    public function index(Request $req)
+    public function index(Request $req, $id)
     {
-         $id=$req->id;
+    
+         $artisan = DB::table('users')->where('id', $id)->get() ;
        
-       return view('commande',['id_art'=>$id]);
+       return view('commande',['Art'=>$artisan]);
     }
 
     /**
@@ -63,7 +65,7 @@ class CommandeController extends Controller
         
         $cmd->save();
         
-        return redirect('/');
+        return redirect('http://127.0.0.1:8000/')->with('success','Merci pour votre commande');
        
     }
 

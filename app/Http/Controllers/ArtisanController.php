@@ -48,7 +48,11 @@ class ArtisanController extends Controller
         $email = $request->email;
         $password = $request->password;
        
+
         
+        try {
+
+                    
         $artisan = new \App\Models\User();
         
         $artisan->name=$nom;
@@ -62,8 +66,13 @@ class ArtisanController extends Controller
         $artisan->password=bcrypt($password);
         
         $artisan->save();
-        
-        return redirect('/');
+          
+          } catch (\Exception $e) {
+          
+              return $e->getMessage();
+          }
+
+        return redirect('/')->with('success','votre compte Artisan à été crée avec succès');
 
     }
 

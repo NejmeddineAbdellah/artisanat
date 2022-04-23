@@ -798,49 +798,13 @@ button {
 
 /** apropos section **/
 
+/** Artisan de chaque metier **/
 
-/** clients section **/
-
-.clients {
-     margin-top: 40px;
-     padding-top: 60px;
+.art_section{
+     padding-bottom: 10%;
 }
 
-.clients .titlepage h2 {
-     color: #202021;
-}
-
-.clients .titlepage span {
-     margin-left: 56px;
-}
-
-.clients_box {
-     text-align: center;
-     background: #e2e3e3;
-     padding: 50px 15px;
-     border-radius: 15px;
-     position: relative;
-}
-
-.clients_box p {
-     font-size: 17px;
-     line-height: 35px;
-}
-
-.clients_box::after {
-     position: absolute;
-     content: "";
-     width: 42px;
-     height: 67px;
-     bottom: -65px;
-     background: url(../images/cli_cross.png);
-     background-repeat: no-repeat;
-}
-
-
-
-/** end clients section **/
-
+/** ------------------------**/
 
 /** contact section **/
 
@@ -959,6 +923,7 @@ button {
      margin: 15px;
 
 }
+
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
