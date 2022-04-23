@@ -185,6 +185,8 @@
         {{session('success')}}
     </div>
     @endif
+
+    
     <!-- banner -->
     <div id="myCarousel" class="carousel slide banner_main" data-ride="carousel">
         <ol class="carousel-indicators">

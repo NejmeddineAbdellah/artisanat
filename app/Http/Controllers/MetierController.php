@@ -49,7 +49,7 @@ class MetierController extends Controller
 
     //-----------function qui permet d'afficher tout les artisans qui ont une  specifier metier -------
 
-    public function show(Request $request, $metier)
+    public function show($metier)
     {
         $artisan = DB::table('users')->where('metier', $metier)->get() ;
 
