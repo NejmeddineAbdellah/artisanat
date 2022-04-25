@@ -399,6 +399,13 @@ button {
      
 
 }
+@media (max-width:667px) {
+     .logo img{
+          display: none;
+     }
+   }
+
+
 .logo a {
      font-size: 40px;
      font-weight: bold;
@@ -954,7 +961,7 @@ button {
 .social-icon__link:hover {
   transform: translateY(-10px);
   color: #fff;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .menu__link {

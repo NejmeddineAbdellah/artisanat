@@ -3,11 +3,12 @@
 namespace TCG\Voyager\Widgets;
 
 use Illuminate\Support\Facades\Auth;
+use App\Models\Notes;
 use Arrilot\Widgets\AbstractWidget;
 use Illuminate\Support\Str;
 use TCG\Voyager\Facades\Voyager;
 
-class UserDimmer extends AbstractWidget
+class NoteDimmer extends AbstractWidget
 {
     /**
      * The configuration array.
@@ -22,17 +23,18 @@ class UserDimmer extends AbstractWidget
      */
     public function run()
     {
-        $count = Voyager::model('User')->count();
-        $string = trans_choice('voyager::dimmer.user', $count);
+      
+        $count = Notes::count();
+        $string = trans_choice('voyager::dimmer.note', $count);
 
         return view('voyager::dimmer', array_merge($this->config, [
-            'icon'   => 'voyager-group',
-            'title'  => "{$count} tilisateur",
-            'text'   => __('Vous avez '.$count.' utilisateurs dans votre base de données. Cliquez sur le bouton ci-dessous pour voir tous les utilisateurs.
+            'icon'   => 'voyager-receipt',
+            'title'  => "{$count} Notes/Questions",
+            'text'   => __('Vous avez '.$count.' Notes/Questions dans votre base de données. Cliquez sur le bouton ci-dessous pour voir tous les Notes/Questions.
             ', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
-                'text' => "afficher tout les utilisateur",
-                'link' => route('voyager.users.index'),
+                'text' => "afficher tout les Notes/Questions",
+                'link' => route('voyager.notes.index'),
             ],
             'image' => voyager_asset('images/widget-backgrounds/01.jpg'),
         ]));

@@ -27,7 +27,7 @@
 <body class="img js-fullheight" style="background-image: url(images/background/bg-01.jpg);">
 
 
-    <header style="background-color:transparent;color:black">
+    <header style="background-color:transparent">
         <!-- header inner -->
         <div class="header">
             <div class="container-fluid">
@@ -100,7 +100,7 @@
                                     <div class="btn-group">
                                         <button type="button" class="btn sign_btn dropdown-toggle"
                                             data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false"><a>Connecter</a>
+                                            aria-expanded="false"><a style="color: #fff;">Connecter</a>
 
                                         </button>
                                         <div class="dropdown-menu">
@@ -114,13 +114,13 @@
                                     <div class="btn-group">
                                         <button type="button" class="btn sign_btn dropdown-toggle"
                                             data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false"><a>inScrire</a>
+                                            aria-expanded="false"><a style="color: #fff;">inScrire</a>
 
                                         </button>
                                         <div class="dropdown-menu">
                                             <a class="dropdown-item"
-                                                href="{{asset('http://127.0.0.1:8000/inscrire_artisan')}}">Artisan</a>
-                                            <a class="dropdown-item" href="#">Client</a>
+                                                href="{{asset('http://127.0.0.1:8000/inscrire_artisan')}}">Artisan </a>
+                                            <a class="dropdown-item" href="{{asset('http://127.0.0.1:8000/inscrire_client')}}">Client</a>
                                         </div>
                                     </div>
                                 </div>
@@ -132,10 +132,10 @@
         </div>
     </header>
     @if(session('success'))
-                            <div class="alert alert-danger">
-                            {{session('success')}}
-                            </div>
-                        @endif
+    <div class="alert alert-danger">
+        {{session('success')}}
+    </div>
+    @endif
 
     <section class="ftco-section">
         <div class="container">
@@ -149,7 +149,7 @@
                     <div class="login-wrap p-0">
                         <h3 class="mb-4 text-center">Avoir un compte?</h3>
                         <form action="connect" method="POST" enctype="multipart/form-data" class="signin-form">
-                        @csrf
+                            @csrf
                             <div class="form-group">
                                 <input type="text" class="form-control" name="email" placeholder="Email" required>
                             </div>
@@ -171,7 +171,8 @@
                                     </label>
                                 </div>
                                 <div class="w-50 text-md-right">
-                                    <a href="{{asset('http://127.0.0.1:8000/inscrire_client')}}" style="color: #fff"> <span>Inscrire
+                                    <a href="{{asset('http://127.0.0.1:8000/inscrire_client')}}" style="color: #fff">
+                                        <span>Inscrire
                                             ?</span> </a>
                                 </div>
                             </div>

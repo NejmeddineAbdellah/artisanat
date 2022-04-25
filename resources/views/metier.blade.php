@@ -255,7 +255,7 @@
 
             @foreach ($myArtisan as $art)
             <div class="col-lg-4 col-md-6 col-sm-12 align-items-stretch card">
-                <img class="card-img-top" src="{{ $art->avatar }}" alt="Card image cap">
+                <img class="card-img-top" src="{{asset('storage/users/'.$art->avatar)}}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">{{ $art->nom }} {{ $art->prenom }}</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to

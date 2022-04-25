@@ -105,13 +105,17 @@
 
 
 
+    @if(session('success'))
+    <div class="alert alert-success">
+        {{session('success')}}
+    </div>
+    @endif
     <div class="limiter">
         <div class="container-login100">
             <div class="login100-more" style="background-image: url('images/background/bg-01.jpg');"></div>
 
             <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-                <form class="login100-form validate-form" action="ajouter_artisan" method="POST"
-                    enctype="multipart/form-data">
+                <form class="login100-form validate-form" action="ajouter_artisan" method="POST" enctype="multipart/form-data">
                     @csrf
                     <span class="login100-form-title p-b-59">
                         S'inscrire Artisan
@@ -145,7 +149,6 @@
                             <option class="input100" value="Poterie">Poterie et pierre</option>
                             <option class="input100" value="Tapis">Tapis</option>
                             <option class="input100" value="Couvertures">Couvertures</option>
-                            <option class="input100" value="Tapis">Tapis</option>
                             <option class="input100" value="Articles chaussants">chaussants</option>
                             <option class="input100" value="Bijouterie">Bijouterie</option>
                             <option class="input100" value="Dinanderie">Dinanderie</option>
@@ -157,7 +160,7 @@
 
                     <div class="wrap-input100">
                         <span class="label-input100">Avatare</span>
-                        <input type="file" name="avatare" class="input100" accept="image/*" />
+                        <input type="file" name="avatar" class="input100" accept="image/*" />
                         <span class="focus-input100"></span>
                     </div>
 

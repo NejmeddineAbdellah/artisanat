@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use PhpParser\Node\Stmt\TryCatch;
 
 class ArtisanController extends Controller
 {
@@ -44,36 +45,47 @@ class ArtisanController extends Controller
         $prenom = $request->prenom;
         $telephone = $request->telephone;
         $metier = $request->metier;
-        $avatare = $request->avatare;
         $email = $request->email;
         $password = $request->password;
+        
+        
        
-
         
         try {
-
-                    
-        $artisan = new \App\Models\User();
+            $artisan = new \App\Models\User();
+            $img=$request->file('avatar');
+        $rename_image=time().'.'.$img->getClientOriginalExtension();
+        $des=public_path('storage/users');
+        $img->move($des,$rename_image);
         
         $artisan->name=$nom;
         $artisan->nom=$nom;
         $artisan->prenom=$prenom;
         $artisan->email=$email;
         $artisan->phone=$telephone;
-        $artisan->avatar=$avatare;
+        $artisan->avatar=$rename_image;
         $artisan->metier=$metier;
         $artisan->role_id='4';
-        $artisan->password=bcrypt($password);
+        $artisan->password=bcrypt($password); 
+
         
-        $artisan->save();
-          
-          } catch (\Exception $e) {
-          
-              return $e->getMessage();
-          }
+            /*
+        $destination_path= 'public/storage/users';
+        $file=$request->file('avatar');
+        $file_name = $file->getClientOriginalName();
+        $file_path = $request->file('avatar')->store($destination_path,$file_name);
+        $input['avatar'] = $file_name;
 
-        return redirect('/')->with('success','votre compte Artisan à été crée avec succès');
-
+*/
+            $artisan->save();
+            return redirect('/')->with('success','votre compte Artisan à été crée avec succès');
+        } catch (\Exception $e) {
+             
+             return redirect('http://127.0.0.1:8000/inscrire_artisan')->with('success','Cette email est deja utilisé vous devrez  tapez un autre email !');
+            
+        }
+       
+        
     }
 
     /**

@@ -32,19 +32,24 @@ class ClientController extends Controller
     //-----------function qui verifier l'authetification du client-------
 
     public function clientlogin(Request $request)
-    {   
-       $cl = Clients::where('email',$request->input('email'))->get();
+    {   $cl = Clients::where('email',$request->input('email'))->get();
 
+     
+       // return redirect('http://127.0.0.1:8000/login_client')->with('success','cette email n\'existe pas');
+       
+            try {
                 if (Hash::check($request->input('password'),$cl[0]->password)) {
                     $request->session()->put('client',['id'=>$cl[0]->id,'nom'=>$cl[0]->nom]);
                     
                     return redirect('/');
-                }
-                else {
+                } else {
                     return redirect('http://127.0.0.1:8000/login_client')->with('success','erreur mot de passe incorrect.
                     !');
-                }    
-                
+                } 
+            } catch (\Throwable $th) {
+                return redirect('http://127.0.0.1:8000/login_client')->with('success','cette email n\'existe pas');
+            }
+            
     }
 
     //-----------function qui permet de deconnecrter un client et detruire la session-------

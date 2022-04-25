@@ -46,12 +46,18 @@ class CommandeController extends Controller
 
     public function store(Request $request)
     {
+       
+        $img=$request->file('image');
+    $rename_image=time().'.'.$img->getClientOriginalExtension();
+    $des=public_path('storage/cmd_image');
+    $img->move($des,$rename_image);
+
         $id_art = $request->input('id_art');
         $id_cl = $request->input('id_cl');
         $titre = $request->input('titre');
         $desc = $request->input('description');
         $date = $request->input('date');
-        $img = $request->input('image');
+   
         
         $cmd = new \App\Models\Commandes();
 
@@ -59,7 +65,7 @@ class CommandeController extends Controller
         $cmd->id_artisan = $id_art;
         $cmd->titre_commande = $titre;
         $cmd->description_commande = $desc;
-        $cmd->image = $img;
+        $cmd->image = $rename_image;
         $cmd->date_commande = $date;
         
         
