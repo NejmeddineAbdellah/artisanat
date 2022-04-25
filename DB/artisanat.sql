@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2022 at 01:35 PM
+-- Generation Time: Apr 25, 2022 at 02:15 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -600,10 +600,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `nom`, `prenom`, `email`, `metier`, `phone`, `avatar`, `email_verified_at`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Admin', 'Admin', 'admin', 'admin@admin.com', NULL, NULL, 'users/default.png', NULL, '$2y$10$lkPFrhB5gRWt0MZl3IgFs.H1mc23JpQfToSOYDa3ENwJMZYRNcbAa', 'QDDq6tNWJESabZ2uVlvz4y8ms4KefscPwx4znMJVLwDshCvTXIpAWcVqYIRF', '{\"locale\":\"fr\"}', '2022-03-23 16:36:51', '2022-04-25 02:18:18'),
-(35, 4, 'artisan01', 'artisan01', 'artisan01', 'artisan01@artisanat.com', 'Bois', '066666666', NULL, NULL, '$2y$10$G3L/3oQMLpr.f6Kvri40/.l.k6LYbDaKhuzg7E.OLBCVpze4KXXjG', NULL, NULL, '2022-04-24 23:42:43', '2022-04-24 23:42:43'),
-(36, 4, 'artisan02', 'artisan02', 'artisan02', 'artisan02@artisanat.com', 'Bois', '066656565', NULL, NULL, '$2y$10$mf/XbsnxEw3MDIel1S4SlOrIJ2EmrPVZw8pcBlxz7pckpi.8OOGcC', NULL, NULL, '2022-04-24 23:45:17', '2022-04-24 23:45:17'),
-(37, 4, 'artisan03', 'artisan03', 'artisan03', 'artisan03@artisanat.com', 'Bois', '066666', '1650849513.png', NULL, '$2y$10$oylLRvpLV/oEY/W2xFqxE.JQHMSnnt6ZrxUFo6uhERnMtrtqXftMa', NULL, NULL, '2022-04-25 01:18:33', '2022-04-25 01:18:33'),
+(1, 1, 'Admin', 'Admin', 'admin', 'admin@admin.com', NULL, NULL, 'users/default.png', NULL, '$2y$10$lkPFrhB5gRWt0MZl3IgFs.H1mc23JpQfToSOYDa3ENwJMZYRNcbAa', 'm8JEOVivGNQ6a2S3wjJ0n7bKZ9P0NpPHLBUmV3wPI0LHOUhrmYrRO44X4v58', '{\"locale\":\"fr\"}', '2022-03-23 16:36:51', '2022-04-25 02:18:18'),
+(35, 4, 'artisan01', 'artisan01', 'artisan01', 'artisan01@artisanat.com', 'Bois', NULL, 'users/default.png', NULL, '$2y$10$G3L/3oQMLpr.f6Kvri40/.l.k6LYbDaKhuzg7E.OLBCVpze4KXXjG', NULL, '{\"locale\":\"fr\"}', '2022-04-24 23:42:43', '2022-04-25 12:09:39'),
+(36, 4, 'artisan02', 'artisan02', 'artisan02', 'artisan02@artisanat.com', 'Bois', NULL, 'users\\April2022\\KKXGSZ4RxlqmXqwo6Gj3.png', NULL, '$2y$10$mf/XbsnxEw3MDIel1S4SlOrIJ2EmrPVZw8pcBlxz7pckpi.8OOGcC', NULL, '{\"locale\":\"fr\"}', '2022-04-24 23:45:17', '2022-04-25 12:10:16'),
+(37, 4, 'artisan03', 'artisan03', 'artisan03', 'artisan03@artisanat.com', 'Bois', NULL, 'users\\April2022\\fbonsAyKYc0wPodDLhIl.png', NULL, '$2y$10$oylLRvpLV/oEY/W2xFqxE.JQHMSnnt6ZrxUFo6uhERnMtrtqXftMa', NULL, '{\"locale\":\"fr\"}', '2022-04-25 01:18:33', '2022-04-25 11:52:35'),
 (38, 3, 'artisan04', 'artisan04', 'artisan04', 'artisan04@artisanat.com', 'Bois', NULL, 'users/default.png', NULL, '$2y$10$ugmrIow.NuapfJyd1xaCrOMLykDVuaAhtkoOojDJqg9ywBF4nMlWS', NULL, '{\"locale\":\"fr\"}', '2022-04-25 02:09:56', '2022-04-25 02:09:56');
 
 -- --------------------------------------------------------

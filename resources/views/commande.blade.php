@@ -43,12 +43,12 @@
                             
                             <div class="form-group">
                                 <textarea class="form-control" type="text_area" value="{{ $Art[0]->nom }}" name="nom_art"
-                                    placeholder="" cols="30" rows="10 ">{{ $Art[0]->nom }}</textarea>
+                                    placeholder="Nom d'artisan" cols="30" rows="10 ">{{ $Art[0]->nom }}</textarea>
                                 <span class="form-label">Nom d'artisan</span>
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control" type="text_area" value="{{session('client')['nom']}}" name="nom_client"
-                                    placeholder="" cols="30" rows="10">{{session('client')['nom']}}</textarea>
+                                    placeholder="Nom Client" cols="30" rows="10">{{session('client')['nom']}}</textarea>
                                 <span class="form-label">Nom Client</span>
                             </div>
                             <div class="form-group">
