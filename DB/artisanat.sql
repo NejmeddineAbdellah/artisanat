@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2022 at 04:02 PM
+-- Generation Time: Apr 25, 2022 at 01:35 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `artisana`
+-- Database: `artisanat`
 --
 
 -- --------------------------------------------------------
@@ -35,13 +35,6 @@ CREATE TABLE `articles` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `articles`
---
-
-INSERT INTO `articles` (`id`, `id_user`, `description_article`, `img_article`, `created_at`, `updated_at`) VALUES
-(1, 3, 'qedsfdhgfjghkjlkmlkùmkjhgfdsghjklk', '[\"articles\\\\April2022\\\\ksU9ZF8SvVLh27B0naHU.png\",\"articles\\\\April2022\\\\o3pDOBXC1qJ4xRybMmwB.png\"]', '2022-04-19 12:19:00', '2022-04-19 13:09:29');
 
 -- --------------------------------------------------------
 
@@ -65,26 +58,26 @@ CREATE TABLE `clients` (
 --
 
 INSERT INTO `clients` (`id`, `nom`, `prenom`, `email`, `tele`, `password`, `created_at`, `updated_at`) VALUES
-(6, 'NEJMEDDINE', 'ABDELLAH', 'crissnajm1998@gmail.com', '0671012945', '$2y$10$0QQqRGO7su61wWQE40d.AOCkXQ0CIFRJeJV5IW2G1PYuZoHfGb0wG', '2022-04-14 01:09:20', '2022-04-14 01:09:20'),
-(8, 'cl1', 'cl1', 'cl@cl.com', '06666666666', '$2y$10$jw3RyaTzpFsiGQaRVYIxyeb1VwT5v7VE6ukwFNB7lZbwuAGdvE6D2', '2022-04-14 10:16:39', '2022-04-14 10:16:39'),
-(11, 'client01', 'client01', 'cl@c1l.com', '0555555555', '$2y$10$fbdfpJ1.f5pfYWpIcIsRZ.8mQHAaEjgOGTYaXxlO2g0FtzSy6Xl02', '2022-04-14 11:10:19', '2022-04-14 11:10:19'),
-(12, 'abdellah', 'abdellah', 'abdellah@code.com', '00000000', '$2y$10$XqayS4shls1i/x0OrI1I1u1S9LUviwJohJIVR8ZGJIgWXiVzEX5qm', '2022-04-19 22:56:58', '2022-04-19 22:56:58'),
-(13, 'a', 'z', 'a@a.com', '01', '$2y$10$75zIL2puREQb9Ts3D4c0Q.OB/elh69IEesDgWjkl8JwC/8AXSpnIu', '2022-04-19 23:07:24', '2022-04-19 23:07:24');
+(16, 'client01', 'client01', 'client01@artisanat.com', '012655255', '$2y$10$p6qj.SlMdgH2yol6gsetoei1ZUHgFndzwi5H4kWyOsxkZVziV1aJm', '2022-04-23 14:43:22', '2022-04-23 14:43:22'),
+(18, 'client02', 'client02', 'client02@artisanat.com', '02225655', '$2y$10$4jC.zsXPtd/q.bzKnjaT.OHXcnHFyKHHruiBqduzaLX/husGtxlPG', '2022-04-23 23:03:56', '2022-04-23 23:03:56'),
+(19, 'client03', 'client03', 'client03@artisanat.com', '06666666666', '$2y$10$IwfiNAdcrUvKwFp2M.n97uCIxqRn955sB4IRu0/P6034v4nncvcOe', '2022-04-24 23:55:29', '2022-04-24 23:55:29');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `commande`
+-- Table structure for table `commandes`
 --
 
-CREATE TABLE `commande` (
+CREATE TABLE `commandes` (
   `id` int(11) NOT NULL,
   `id_client` bigint(20) NOT NULL,
   `id_artisan` bigint(20) UNSIGNED NOT NULL,
   `titre_commande` varchar(100) NOT NULL,
   `description_commande` varchar(200) NOT NULL,
   `image` varchar(100) DEFAULT NULL,
-  `date_commande` date NOT NULL
+  `date_commande` date NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -157,7 +150,16 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (45, 21, 'description_article', 'text_area', 'Description Article', 0, 1, 1, 1, 1, 1, '{}', 3),
 (46, 21, 'img_article', 'multiple_images', 'Img Article', 0, 1, 1, 1, 1, 1, '{}', 4),
 (47, 21, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 5),
-(48, 21, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 6);
+(48, 21, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 6),
+(49, 22, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(50, 22, 'id_client', 'text', 'Id Client', 1, 0, 0, 0, 0, 0, '{}', 2),
+(51, 22, 'id_artisan', 'text', 'Id Artisan', 1, 1, 0, 0, 0, 0, '{}', 3),
+(52, 22, 'titre_commande', 'text', 'Titre Commande', 1, 1, 1, 1, 1, 1, '{}', 4),
+(53, 22, 'description_commande', 'text', 'Description Commande', 1, 1, 1, 1, 1, 1, '{}', 5),
+(54, 22, 'image', 'image', 'Image', 0, 1, 1, 1, 1, 1, '{}', 6),
+(55, 22, 'date_commande', 'date', 'Date Commande', 1, 1, 1, 1, 1, 1, '{}', 7),
+(56, 22, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 8),
+(57, 22, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 9);
 
 -- --------------------------------------------------------
 
@@ -193,7 +195,8 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, 'TCG\\Voyager\\Http\\Controllers\\VoyagerRoleController', '', 1, 0, NULL, '2022-03-23 16:35:57', '2022-03-23 16:35:57'),
 (9, 'clients', 'clients', 'Client', 'Clients', NULL, 'App\\Models\\Clients', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-04-18 13:34:32', '2022-04-18 13:34:32'),
 (20, 'notes', 'notes', 'Note', 'Notes', NULL, 'App\\Models\\Notes', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2022-04-19 12:12:25', '2022-04-19 12:12:25'),
-(21, 'articles', 'articles', 'Article', 'Articles', NULL, 'App\\Models\\Articles', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2022-04-19 12:13:42', '2022-04-19 12:14:18');
+(21, 'articles', 'articles', 'Article', 'Articles', NULL, 'App\\Models\\Articles', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2022-04-19 12:13:42', '2022-04-19 12:14:18'),
+(22, 'commandes', 'commandes', 'Commande', 'Commandes', 'voyager-paper-plane', 'App\\Models\\Commandes', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":\"id_artisan\",\"scope\":null}', '2022-04-21 10:24:39', '2022-04-23 23:33:22');
 
 -- --------------------------------------------------------
 
@@ -258,19 +261,20 @@ CREATE TABLE `menu_items` (
 --
 
 INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class`, `color`, `parent_id`, `order`, `created_at`, `updated_at`, `route`, `parameters`) VALUES
-(1, 1, 'Dashboard', '', '_self', 'voyager-boat', NULL, NULL, 1, '2022-03-23 16:35:57', '2022-03-23 16:35:57', 'voyager.dashboard', NULL),
-(2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 4, '2022-03-23 16:35:57', '2022-04-18 13:49:16', 'voyager.media.index', NULL),
-(3, 1, 'Users', '', '_self', 'voyager-person', NULL, NULL, 3, '2022-03-23 16:35:57', '2022-03-23 16:35:57', 'voyager.users.index', NULL),
-(4, 1, 'Roles', '', '_self', 'voyager-lock', NULL, NULL, 2, '2022-03-23 16:35:57', '2022-03-23 16:35:57', 'voyager.roles.index', NULL),
-(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 8, '2022-03-23 16:35:57', '2022-04-19 23:29:31', NULL, NULL),
+(1, 1, 'Dashboard', '', '_self', 'voyager-boat', NULL, NULL, 1, '2022-03-23 16:35:57', '2022-04-23 13:51:27', 'voyager.dashboard', NULL),
+(2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 5, '2022-03-23 16:35:57', '2022-04-23 13:51:27', 'voyager.media.index', NULL),
+(3, 1, 'Users', '', '_self', 'voyager-person', NULL, NULL, 4, '2022-03-23 16:35:57', '2022-04-23 13:51:27', 'voyager.users.index', NULL),
+(4, 1, 'Roles', '', '_self', 'voyager-lock', NULL, NULL, 3, '2022-03-23 16:35:57', '2022-04-23 13:51:27', 'voyager.roles.index', NULL),
+(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 9, '2022-03-23 16:35:57', '2022-04-21 10:31:06', NULL, NULL),
 (6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 5, 1, '2022-03-23 16:35:57', '2022-04-18 13:49:16', 'voyager.menus.index', NULL),
 (7, 1, 'Database', '', '_self', 'voyager-data', NULL, 5, 2, '2022-03-23 16:35:57', '2022-04-18 13:49:16', 'voyager.database.index', NULL),
 (8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 3, '2022-03-23 16:35:57', '2022-04-18 13:49:16', 'voyager.compass.index', NULL),
 (9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 4, '2022-03-23 16:35:57', '2022-04-18 13:49:16', 'voyager.bread.index', NULL),
-(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 9, '2022-03-23 16:35:57', '2022-04-19 23:29:31', 'voyager.settings.index', NULL),
-(11, 1, 'Clients', '', '_self', 'voyager-people', '#000000', NULL, 5, '2022-04-18 13:34:32', '2022-04-19 23:29:28', 'voyager.clients.index', 'null'),
-(14, 1, 'Notes', '', '_self', 'voyager-receipt', '#000000', NULL, 6, '2022-04-19 12:12:26', '2022-04-19 23:29:30', 'voyager.notes.index', 'null'),
-(15, 1, 'Articles', '', '_self', 'voyager-hammer', '#000000', NULL, 7, '2022-04-19 12:13:42', '2022-04-19 23:29:31', 'voyager.articles.index', 'null');
+(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 10, '2022-03-23 16:35:57', '2022-04-21 10:31:06', 'voyager.settings.index', NULL),
+(11, 1, 'Clients', '', '_self', 'voyager-people', '#000000', NULL, 6, '2022-04-18 13:34:32', '2022-04-23 13:51:27', 'voyager.clients.index', 'null'),
+(14, 1, 'Notes', '', '_self', 'voyager-receipt', '#000000', NULL, 2, '2022-04-19 12:12:26', '2022-04-23 13:51:27', 'voyager.notes.index', 'null'),
+(15, 1, 'Articles', '', '_self', 'voyager-hammer', '#000000', NULL, 7, '2022-04-19 12:13:42', '2022-04-23 13:51:27', 'voyager.articles.index', 'null'),
+(16, 1, 'Commandes', '', '_self', 'voyager-paper-plane', '#000000', NULL, 8, '2022-04-21 10:24:39', '2022-04-25 02:13:01', 'voyager.commandes.index', 'null');
 
 -- --------------------------------------------------------
 
@@ -327,13 +331,6 @@ CREATE TABLE `notes` (
   `email` varchar(50) NOT NULL,
   `description` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `notes`
---
-
-INSERT INTO `notes` (`id`, `utilisateur`, `email`, `description`) VALUES
-(1, 'sqdfs', 'crissnajm1998@gmail.com', 'dghfjghkj');
 
 -- --------------------------------------------------------
 
@@ -405,7 +402,12 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (47, 'read_articles', 'articles', '2022-04-19 12:13:42', '2022-04-19 12:13:42'),
 (48, 'edit_articles', 'articles', '2022-04-19 12:13:42', '2022-04-19 12:13:42'),
 (49, 'add_articles', 'articles', '2022-04-19 12:13:42', '2022-04-19 12:13:42'),
-(50, 'delete_articles', 'articles', '2022-04-19 12:13:42', '2022-04-19 12:13:42');
+(50, 'delete_articles', 'articles', '2022-04-19 12:13:42', '2022-04-19 12:13:42'),
+(51, 'browse_commandes', 'commandes', '2022-04-21 10:24:39', '2022-04-21 10:24:39'),
+(52, 'read_commandes', 'commandes', '2022-04-21 10:24:39', '2022-04-21 10:24:39'),
+(53, 'edit_commandes', 'commandes', '2022-04-21 10:24:39', '2022-04-21 10:24:39'),
+(54, 'add_commandes', 'commandes', '2022-04-21 10:24:39', '2022-04-21 10:24:39'),
+(55, 'delete_commandes', 'commandes', '2022-04-21 10:24:39', '2022-04-21 10:24:39');
 
 -- --------------------------------------------------------
 
@@ -431,7 +433,6 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (4, 1),
 (5, 1),
 (6, 1),
-(6, 4),
 (7, 1),
 (8, 1),
 (9, 1),
@@ -442,7 +443,6 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (14, 1),
 (15, 1),
 (16, 1),
-(16, 4),
 (17, 1),
 (18, 1),
 (19, 1),
@@ -471,7 +471,14 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (49, 1),
 (49, 3),
 (50, 1),
-(50, 3);
+(50, 3),
+(51, 1),
+(51, 3),
+(52, 1),
+(52, 3),
+(53, 1),
+(54, 1),
+(55, 1);
 
 -- --------------------------------------------------------
 
@@ -536,16 +543,16 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`, `order`, `group`) VALUES
-(1, 'site.title', 'Site Title', 'Site Title', '', 'text', 1, 'Site'),
-(2, 'site.description', 'Site Description', 'Site Description', '', 'text', 2, 'Site'),
-(3, 'site.logo', 'Site Logo', '', '', 'image', 3, 'Site'),
-(4, 'site.google_analytics_tracking_id', 'Google Analytics Tracking ID', '', '', 'text', 4, 'Site'),
+(1, 'site.title', 'Site Title', 'El-maalem', '', 'text', 1, 'Site'),
+(2, 'site.description', 'Site Description', 'On a constaté la difficulté de contacter les artisans et de trouver ce que le client veut ça dépend de son besoin donc on a décidé de créer un site web dédié au marché de l\'artisanat au Maroc. Ce site est dédié à des étrangers pour une valeur spéciale auprès de ses clients.', '', 'text', 2, 'Site'),
+(3, 'site.logo', 'Site Logo', 'settings\\April2022\\ytdb2rpjezIV051EuHEI.png', '', 'image', 3, 'Site'),
+(4, 'site.google_analytics_tracking_id', 'Google Analytics Tracking ID', NULL, '', 'text', 4, 'Site'),
 (5, 'admin.bg_image', 'Admin Background Image', '', '', 'image', 5, 'Admin'),
 (6, 'admin.title', 'Admin Title', 'Voyager', '', 'text', 1, 'Admin'),
 (7, 'admin.description', 'Admin Description', 'Welcome to Voyager. The Missing Admin for Laravel', '', 'text', 2, 'Admin'),
 (8, 'admin.loader', 'Admin Loader', '', '', 'image', 3, 'Admin'),
 (9, 'admin.icon_image', 'Admin Icon Image', '', '', 'image', 4, 'Admin'),
-(10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', '', '', 'text', 1, 'Admin');
+(10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', NULL, '', 'text', 1, 'Admin');
 
 -- --------------------------------------------------------
 
@@ -574,33 +581,30 @@ CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `role_id` bigint(20) UNSIGNED DEFAULT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nom` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `prenom` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `metier` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` varchar(16) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `avatar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT 'users/default.png',
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `settings` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `nom` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `prenom` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `telephone` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `metier` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `email_verified_at`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`, `nom`, `prenom`, `telephone`, `metier`) VALUES
-(1, 1, 'Admin', 'admin@admin.com', 'users/default.png', NULL, '$2y$10$lkPFrhB5gRWt0MZl3IgFs.H1mc23JpQfToSOYDa3ENwJMZYRNcbAa', '9aOpzlNVe20NOJ8MUQ9jyr1SrMKcHgmcWa3MxB4LzWgEWiKEsaJlH7UoT05l', NULL, '2022-03-23 16:36:51', '2022-03-23 16:36:51', '', '', '', NULL),
-(2, 3, 'Artisan1', 'ar1@admin.com', 'users/default.png', NULL, '$2y$10$PVJVizhCoYC4brQzhT9HUOOtswxpBKFrZS68cD.tA8XkVx0ssEvD.', NULL, '{\"locale\":\"en\"}', '2022-03-31 21:25:47', '2022-03-31 21:25:47', '', '', '', NULL),
-(3, 4, 'artisan01', 'art01@admin.com', 'users/default.png', NULL, '$2y$10$nNaCAmbkZbwE4M/mS6bMt.5ZCDNGGr.ORGWmoiI3bsine9QjR4Q3C', NULL, '{\"locale\":\"fr\"}', '2022-04-16 13:49:27', '2022-04-16 13:49:27', 'nejmeddine', 'abdellah', '066662552', 'bois'),
-(4, 4, 'artisan02', 'art02@admin.com', 'users/default.png', NULL, '$2y$10$931xgg1661Yq3X7itMuoQu59qkJQAF6QXZHX1N7GcGSsYBbR0Bzvy', NULL, '{\"locale\":\"fr\"}', '2022-04-16 13:52:56', '2022-04-16 13:52:56', 'nejm', 'abdellah', '06666222', 'bois'),
-(5, 4, 'artisan03', 'art03@admin.com', 'users/default.png', NULL, '$2y$10$uC/O9qqj1/glVRjKWSl4O.2VpGfhYiIW6ROTO3GMOA8edn6HfEqfy', NULL, '{\"locale\":\"fr\"}', '2022-04-16 13:53:51', '2022-04-16 13:53:51', 'essbaa', 'amine', '015555555', 'bois'),
-(6, 4, 'artisan04', 'art04@admin.com', 'users/default.png', NULL, '$2y$10$PtrCFp1e2nC0xNqIWAgzl.imypL9hVVZLOTtG15HJUr7QI42q.meW', NULL, '{\"locale\":\"fr\"}', '2022-04-16 13:54:52', '2022-04-16 13:54:52', 'daoui', 'yazid', '022222222', 'bois'),
-(7, 4, 'artisan05', 'art05@admin.com', 'users/default.png', NULL, '$2y$10$N/nZAXkONiCGnSXuF6D7KuPPGkorxg/sH1DKhJdL/3dFP9J0AhOX.', NULL, '{\"locale\":\"fr\"}', '2022-04-16 13:55:33', '2022-04-16 13:55:33', 'chemrari', 'amine', '05555555', 'vetement'),
-(8, 4, 'kamal', 'art06@admin.com', 'C:\\wamp64\\tmp\\php5061.tmp', NULL, '$2y$10$/x4nxuMIi.XPC76dZZ5Z.e952NbA8Dp38/PN7fuDAiyslVneLbeeq', NULL, NULL, '2022-04-17 12:33:05', '2022-04-17 12:33:05', 'kamal', 'kamal', '021111', 'Vetements');
+INSERT INTO `users` (`id`, `role_id`, `name`, `nom`, `prenom`, `email`, `metier`, `phone`, `avatar`, `email_verified_at`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Admin', 'Admin', 'admin', 'admin@admin.com', NULL, NULL, 'users/default.png', NULL, '$2y$10$lkPFrhB5gRWt0MZl3IgFs.H1mc23JpQfToSOYDa3ENwJMZYRNcbAa', 'QDDq6tNWJESabZ2uVlvz4y8ms4KefscPwx4znMJVLwDshCvTXIpAWcVqYIRF', '{\"locale\":\"fr\"}', '2022-03-23 16:36:51', '2022-04-25 02:18:18'),
+(35, 4, 'artisan01', 'artisan01', 'artisan01', 'artisan01@artisanat.com', 'Bois', '066666666', NULL, NULL, '$2y$10$G3L/3oQMLpr.f6Kvri40/.l.k6LYbDaKhuzg7E.OLBCVpze4KXXjG', NULL, NULL, '2022-04-24 23:42:43', '2022-04-24 23:42:43'),
+(36, 4, 'artisan02', 'artisan02', 'artisan02', 'artisan02@artisanat.com', 'Bois', '066656565', NULL, NULL, '$2y$10$mf/XbsnxEw3MDIel1S4SlOrIJ2EmrPVZw8pcBlxz7pckpi.8OOGcC', NULL, NULL, '2022-04-24 23:45:17', '2022-04-24 23:45:17'),
+(37, 4, 'artisan03', 'artisan03', 'artisan03', 'artisan03@artisanat.com', 'Bois', '066666', '1650849513.png', NULL, '$2y$10$oylLRvpLV/oEY/W2xFqxE.JQHMSnnt6ZrxUFo6uhERnMtrtqXftMa', NULL, NULL, '2022-04-25 01:18:33', '2022-04-25 01:18:33'),
+(38, 3, 'artisan04', 'artisan04', 'artisan04', 'artisan04@artisanat.com', 'Bois', NULL, 'users/default.png', NULL, '$2y$10$ugmrIow.NuapfJyd1xaCrOMLykDVuaAhtkoOojDJqg9ywBF4nMlWS', NULL, '{\"locale\":\"fr\"}', '2022-04-25 02:09:56', '2022-04-25 02:09:56');
 
 -- --------------------------------------------------------
 
@@ -632,9 +636,9 @@ ALTER TABLE `clients`
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- Indexes for table `commande`
+-- Indexes for table `commandes`
 --
-ALTER TABLE `commande`
+ALTER TABLE `commandes`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_cl` (`id_client`),
   ADD KEY `id_art` (`id_artisan`),
@@ -769,25 +773,25 @@ ALTER TABLE `articles`
 -- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT for table `commande`
+-- AUTO_INCREMENT for table `commandes`
 --
-ALTER TABLE `commande`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `commandes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -805,7 +809,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT for table `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -817,13 +821,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `notes`
 --
 ALTER TABLE `notes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -853,7 +857,7 @@ ALTER TABLE `translations`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- Constraints for dumped tables
@@ -866,9 +870,9 @@ ALTER TABLE `articles`
   ADD CONSTRAINT `ck_id_user_article` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`);
 
 --
--- Constraints for table `commande`
+-- Constraints for table `commandes`
 --
-ALTER TABLE `commande`
+ALTER TABLE `commandes`
   ADD CONSTRAINT `cmd_art` FOREIGN KEY (`id_artisan`) REFERENCES `users` (`id`),
   ADD CONSTRAINT `cmd_client` FOREIGN KEY (`id_client`) REFERENCES `clients` (`id`);
 
