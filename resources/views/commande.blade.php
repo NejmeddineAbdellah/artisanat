@@ -66,7 +66,7 @@
                             </div>
                             <div class="form-group">
                                 <label style="color: #ffffff;">Exemple de votre commande</label>
-                                <input class="form-control" type="file" name="image" placeholder=" ">
+                                <input class="form-control" type="file" name="image" placeholder=" " required>
                                 <span class="form-label">image</span>
                             </div>
                             <div class="form-btn">

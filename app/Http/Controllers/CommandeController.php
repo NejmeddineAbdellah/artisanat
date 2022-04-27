@@ -46,11 +46,12 @@ class CommandeController extends Controller
 
     public function store(Request $request)
     {
+        
        
         $img=$request->file('image');
-    $rename_image=time().'.'.$img->getClientOriginalExtension();
-    $des=public_path('storage/cmd_image');
-    $img->move($des,$rename_image);
+        $rename_image = time().'.'.$img->getClientOriginalExtension();    
+        $des=public_path('storage/cmd_image');
+        $img->move($des,$rename_image);
 
         $id_art = $request->input('id_art');
         $id_cl = $request->input('id_cl');
@@ -69,7 +70,8 @@ class CommandeController extends Controller
         $cmd->date_commande = $date;
         
         
-        $cmd->save();
+            $cmd->save();
+      
         
         return redirect('http://127.0.0.1:8000/')->with('success','Merci pour votre commande');
        

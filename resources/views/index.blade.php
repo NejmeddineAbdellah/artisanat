@@ -298,7 +298,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="metier_img">
-                                <figure><img src="images/about_img.png" alt="#" /></figure>
+                                <figure><img src="images/metier/batiment_traditionnel.jpg" alt="#" /></figure>
                             </div>
                         </div>
                     </div>
@@ -404,7 +404,7 @@
                         </div>
                         <div class="col-lg-4 col-md-3">
                             <div class="metier_img">
-                                <figure><img src="images/about_img.png" alt="#" /></figure>
+                                <figure><img src="images/metier/couverture.jpg" alt="#" /></figure>
                             </div>
                         </div>
                     </div>
@@ -425,7 +425,7 @@
                         </div>
                         <div class="col-lg-4 col-md-3">
                             <div class="metier_img">
-                                <figure><img src="images/about_img.png" alt="#" /></figure>
+                                <figure><img src="images/metier/chaussants.jpg" alt="#" /></figure>
                             </div>
                         </div>
                     </div>
